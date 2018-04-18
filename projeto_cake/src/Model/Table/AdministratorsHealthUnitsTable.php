@@ -73,6 +73,8 @@ class AdministratorsHealthUnitsTable extends Table
     {
         $rules->add($rules->existsIn(['health_unit_id'], 'HealthUnits'));
         $rules->add($rules->existsIn(['administrator_id'], 'Administrators'));
+        $rules->add($rules->isUnique(['health_unit_id', 'administrator_id']));
+
 
         return $rules;
     }
