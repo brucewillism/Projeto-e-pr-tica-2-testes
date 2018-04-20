@@ -35,7 +35,7 @@ class HealthUnitsController extends AppController
     public function view($id = null)
     {
         $healthUnit = $this->HealthUnits->get($id, [
-            'contain' => []
+            'contain' => ['Users']
         ]);
 
         $this->set('healthUnit', $healthUnit);
@@ -58,7 +58,8 @@ class HealthUnitsController extends AppController
             }
             $this->Flash->error(__('The health unit could not be saved. Please, try again.'));
         }
-        $this->set(compact('healthUnit'));
+        $users = $this->HealthUnits->Users->find('list', ['limit' => 200]);
+        $this->set(compact('healthUnit', 'users'));
     }
 
     /**
@@ -71,7 +72,7 @@ class HealthUnitsController extends AppController
     public function edit($id = null)
     {
         $healthUnit = $this->HealthUnits->get($id, [
-            'contain' => []
+            'contain' => ['Users']
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $healthUnit = $this->HealthUnits->patchEntity($healthUnit, $this->request->getData());
@@ -82,7 +83,8 @@ class HealthUnitsController extends AppController
             }
             $this->Flash->error(__('The health unit could not be saved. Please, try again.'));
         }
-        $this->set(compact('healthUnit'));
+        $users = $this->HealthUnits->Users->find('list', ['limit' => 200]);
+        $this->set(compact('healthUnit', 'users'));
     }
 
     /**

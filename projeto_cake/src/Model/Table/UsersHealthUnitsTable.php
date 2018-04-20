@@ -7,20 +7,20 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * AdministratorsHealthUnits Model
+ * UsersHealthUnits Model
  *
  * @property \App\Model\Table\HealthUnitsTable|\Cake\ORM\Association\BelongsTo $HealthUnits
- * @property \App\Model\Table\AdministratorsTable|\Cake\ORM\Association\BelongsTo $Administrators
+ * @property \App\Model\Table\UsersTable|\Cake\ORM\Association\BelongsTo $Users
  *
- * @method \App\Model\Entity\AdministratorsHealthUnit get($primaryKey, $options = [])
- * @method \App\Model\Entity\AdministratorsHealthUnit newEntity($data = null, array $options = [])
- * @method \App\Model\Entity\AdministratorsHealthUnit[] newEntities(array $data, array $options = [])
- * @method \App\Model\Entity\AdministratorsHealthUnit|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\AdministratorsHealthUnit patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \App\Model\Entity\AdministratorsHealthUnit[] patchEntities($entities, array $data, array $options = [])
- * @method \App\Model\Entity\AdministratorsHealthUnit findOrCreate($search, callable $callback = null, $options = [])
+ * @method \App\Model\Entity\UsersHealthUnit get($primaryKey, $options = [])
+ * @method \App\Model\Entity\UsersHealthUnit newEntity($data = null, array $options = [])
+ * @method \App\Model\Entity\UsersHealthUnit[] newEntities(array $data, array $options = [])
+ * @method \App\Model\Entity\UsersHealthUnit|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\UsersHealthUnit patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \App\Model\Entity\UsersHealthUnit[] patchEntities($entities, array $data, array $options = [])
+ * @method \App\Model\Entity\UsersHealthUnit findOrCreate($search, callable $callback = null, $options = [])
  */
-class AdministratorsHealthUnitsTable extends Table
+class UsersHealthUnitsTable extends Table
 {
 
     /**
@@ -33,7 +33,7 @@ class AdministratorsHealthUnitsTable extends Table
     {
         parent::initialize($config);
 
-        $this->setTable('administrators_health_units');
+        $this->setTable('users_health_units');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
 
@@ -41,8 +41,8 @@ class AdministratorsHealthUnitsTable extends Table
             'foreignKey' => 'health_unit_id',
             'joinType' => 'INNER'
         ]);
-        $this->belongsTo('Administrators', [
-            'foreignKey' => 'administrator_id',
+        $this->belongsTo('Users', [
+            'foreignKey' => 'user_id',
             'joinType' => 'INNER'
         ]);
     }
@@ -72,9 +72,7 @@ class AdministratorsHealthUnitsTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->existsIn(['health_unit_id'], 'HealthUnits'));
-        $rules->add($rules->existsIn(['administrator_id'], 'Administrators'));
-        $rules->add($rules->isUnique(['health_unit_id', 'administrator_id']));
-
+        $rules->add($rules->existsIn(['user_id'], 'Users'));
 
         return $rules;
     }

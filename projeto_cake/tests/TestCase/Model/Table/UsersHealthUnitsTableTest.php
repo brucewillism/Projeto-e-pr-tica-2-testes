@@ -1,22 +1,22 @@
 <?php
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Table\AdministratorsTable;
+use App\Model\Table\UsersHealthUnitsTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 /**
- * App\Model\Table\AdministratorsTable Test Case
+ * App\Model\Table\UsersHealthUnitsTable Test Case
  */
-class AdministratorsTableTest extends TestCase
+class UsersHealthUnitsTableTest extends TestCase
 {
 
     /**
      * Test subject
      *
-     * @var \App\Model\Table\AdministratorsTable
+     * @var \App\Model\Table\UsersHealthUnitsTable
      */
-    public $Administrators;
+    public $UsersHealthUnits;
 
     /**
      * Fixtures
@@ -24,8 +24,9 @@ class AdministratorsTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.administrators',
-        'app.health_units'
+        'app.users_health_units',
+        'app.health_units',
+        'app.users'
     ];
 
     /**
@@ -36,8 +37,8 @@ class AdministratorsTableTest extends TestCase
     public function setUp()
     {
         parent::setUp();
-        $config = TableRegistry::exists('Administrators') ? [] : ['className' => AdministratorsTable::class];
-        $this->Administrators = TableRegistry::get('Administrators', $config);
+        $config = TableRegistry::exists('UsersHealthUnits') ? [] : ['className' => UsersHealthUnitsTable::class];
+        $this->UsersHealthUnits = TableRegistry::get('UsersHealthUnits', $config);
     }
 
     /**
@@ -47,7 +48,7 @@ class AdministratorsTableTest extends TestCase
      */
     public function tearDown()
     {
-        unset($this->Administrators);
+        unset($this->UsersHealthUnits);
 
         parent::tearDown();
     }

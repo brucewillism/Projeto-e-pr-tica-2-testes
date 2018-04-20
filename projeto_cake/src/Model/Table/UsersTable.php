@@ -7,19 +7,19 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * Administrators Model
+ * Users Model
  *
  * @property \App\Model\Table\HealthUnitsTable|\Cake\ORM\Association\BelongsToMany $HealthUnits
  *
- * @method \App\Model\Entity\Administrator get($primaryKey, $options = [])
- * @method \App\Model\Entity\Administrator newEntity($data = null, array $options = [])
- * @method \App\Model\Entity\Administrator[] newEntities(array $data, array $options = [])
- * @method \App\Model\Entity\Administrator|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\Administrator patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \App\Model\Entity\Administrator[] patchEntities($entities, array $data, array $options = [])
- * @method \App\Model\Entity\Administrator findOrCreate($search, callable $callback = null, $options = [])
+ * @method \App\Model\Entity\User get($primaryKey, $options = [])
+ * @method \App\Model\Entity\User newEntity($data = null, array $options = [])
+ * @method \App\Model\Entity\User[] newEntities(array $data, array $options = [])
+ * @method \App\Model\Entity\User|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\User patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \App\Model\Entity\User[] patchEntities($entities, array $data, array $options = [])
+ * @method \App\Model\Entity\User findOrCreate($search, callable $callback = null, $options = [])
  */
-class AdministratorsTable extends Table
+class UsersTable extends Table
 {
 
     /**
@@ -32,14 +32,14 @@ class AdministratorsTable extends Table
     {
         parent::initialize($config);
 
-        $this->setTable('administrators');
+        $this->setTable('users');
         $this->setDisplayField('name');
         $this->setPrimaryKey('id');
 
         $this->belongsToMany('HealthUnits', [
-            'foreignKey' => 'administrator_id',
+            'foreignKey' => 'user_id',
             'targetForeignKey' => 'health_unit_id',
-            'joinTable' => 'administrators_health_units'
+            'joinTable' => 'users_health_units'
         ]);
     }
 

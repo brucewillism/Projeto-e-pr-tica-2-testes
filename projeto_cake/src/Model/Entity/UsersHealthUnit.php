@@ -4,16 +4,16 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * AdministratorsHealthUnit Entity
+ * UsersHealthUnit Entity
  *
  * @property int $id
  * @property int $health_unit_id
- * @property int $administrator_id
+ * @property int $user_id
  *
  * @property \App\Model\Entity\HealthUnit $health_unit
- * @property \App\Model\Entity\Administrator $administrator
+ * @property \App\Model\Entity\User $user
  */
-class AdministratorsHealthUnit extends Entity
+class UsersHealthUnit extends Entity
 {
 
     /**
@@ -27,8 +27,8 @@ class AdministratorsHealthUnit extends Entity
      */
     protected $_accessible = [
         'health_unit_id' => true,
-        'administrator_id' => true,
+        'user_id' => true,
         'health_unit' => true,
-        'administrator' => true
+        'user' => true
     ];
 }

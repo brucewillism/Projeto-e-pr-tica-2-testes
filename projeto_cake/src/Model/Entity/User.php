@@ -4,17 +4,17 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Administrator Entity
+ * User Entity
  *
  * @property int $id
  * @property string $name
- * @property string $login
+ * @property string $username
  * @property string $password
  * @property string $email
  *
  * @property \App\Model\Entity\HealthUnit[] $health_units
  */
-class Administrator extends Entity
+class User extends Entity
 {
 
     /**
@@ -27,7 +27,11 @@ class Administrator extends Entity
      * @var array
      */
     protected $_accessible = [
-        "*"=>true
+        'name' => true,
+        'username' => true,
+        'password' => true,
+        'email' => true,
+        'health_units' => true
     ];
 
     /**

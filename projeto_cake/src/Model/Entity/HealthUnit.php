@@ -13,6 +13,8 @@ use Cake\ORM\Entity;
  * @property string $complete_address
  * @property string $latitude
  * @property string $longitude
+ *
+ * @property \App\Model\Entity\User[] $users
  */
 class HealthUnit extends Entity
 {
@@ -32,6 +34,7 @@ class HealthUnit extends Entity
         'CEP' => true,
         'complete_address' => true,
         'latitude' => true,
-        'longitude' => true
+        'longitude' => true,
+        'users' => true
     ];
 }

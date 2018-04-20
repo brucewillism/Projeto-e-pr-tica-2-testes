@@ -9,7 +9,7 @@ use Cake\Validation\Validator;
 /**
  * HealthUnits Model
  *
- * @property |\Cake\ORM\Association\BelongsToMany $Administrators
+ * @property \App\Model\Table\UsersTable|\Cake\ORM\Association\BelongsToMany $Users
  *
  * @method \App\Model\Entity\HealthUnit get($primaryKey, $options = [])
  * @method \App\Model\Entity\HealthUnit newEntity($data = null, array $options = [])
@@ -36,10 +36,10 @@ class HealthUnitsTable extends Table
         $this->setDisplayField('name');
         $this->setPrimaryKey('id');
 
-        $this->belongsToMany('Administrators', [
+        $this->belongsToMany('Users', [
             'foreignKey' => 'health_unit_id',
-            'targetForeignKey' => 'administrator_id',
-            'joinTable' => 'administrators_health_units'
+            'targetForeignKey' => 'user_id',
+            'joinTable' => 'users_health_units'
         ]);
     }
 

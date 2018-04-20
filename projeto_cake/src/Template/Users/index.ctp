@@ -1,19 +1,19 @@
 <?php
 /**
  * @var \App\View\AppView $this
- * @var \App\Model\Entity\Administrator[]|\Cake\Collection\CollectionInterface $administrators
+ * @var \App\Model\Entity\User[]|\Cake\Collection\CollectionInterface $users
  */
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Administrator'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Health Units'), ['controller' => 'HealthUnits', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Health Unit'), ['controller' => 'HealthUnits', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="administrators index large-9 medium-8 columns content">
-    <h3><?= __('Administrators') ?></h3>
+<div class="users index large-9 medium-8 columns content">
+    <h3><?= __('Users') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
@@ -26,17 +26,17 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($administrators as $administrator): ?>
+            <?php foreach ($users as $user): ?>
             <tr>
-                <td><?= $this->Number->format($administrator->id) ?></td>
-                <td><?= h($administrator->name) ?></td>
-                <td><?= h($administrator->username) ?></td>
-                <td><?= h($administrator->password) ?></td>
-                <td><?= h($administrator->email) ?></td>
+                <td><?= $this->Number->format($user->id) ?></td>
+                <td><?= h($user->name) ?></td>
+                <td><?= h($user->username) ?></td>
+                <td><?= h($user->password) ?></td>
+                <td><?= h($user->email) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $administrator->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $administrator->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $administrator->id], ['confirm' => __('Are you sure you want to delete # {0}?', $administrator->id)]) ?>
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $user->id]) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>

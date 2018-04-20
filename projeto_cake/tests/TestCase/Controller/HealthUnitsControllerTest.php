@@ -16,7 +16,9 @@ class HealthUnitsControllerTest extends IntegrationTestCase
      * @var array
      */
     public $fixtures = [
-        'app.health_units'
+        'app.health_units',
+        'app.users',
+        'app.users_health_units'
     ];
 
     /**
