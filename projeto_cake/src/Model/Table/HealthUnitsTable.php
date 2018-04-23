@@ -90,4 +90,9 @@ class HealthUnitsTable extends Table
 
         return $validator;
     }
+
+    public function isOwnedBy($healthUnitId, $userId)
+    {
+        return $this->exists(['id' => $healthUnitId, 'user_id' => $userId]);
+    }
 }

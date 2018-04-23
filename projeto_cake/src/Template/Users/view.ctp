@@ -34,6 +34,7 @@
             <th scope="row"><?= __('Email') ?></th>
             <td><?= h($user->email) ?></td>
         </tr>
+      
         <tr>
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($user->id) ?></td>

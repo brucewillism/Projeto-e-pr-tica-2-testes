@@ -106,4 +106,26 @@ class HealthUnitsController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+
+    public function isAuthorized($user)
+    {
+        if ($this->request->action === 'add') {
+            return true;
+        }
+        if (in_array($this->request->action, ['edit', 'delete'])) {
+            $healhUnitId = (int)$this->request->params['pass'][0];
+            if ($this->healthUnit->isOwnedBy($healthUnitId, $user['id'])) {
+                return true;
+            }
+        }
+        return parent::isAuthorized($user);
+    }
+    
+    public function isOwnedBy($healthUnit, $userId)
+    {
+        return $this->exists(['id' => $healthUnit, 'user_id' => $userId]);
+    }
+
+
+
 }

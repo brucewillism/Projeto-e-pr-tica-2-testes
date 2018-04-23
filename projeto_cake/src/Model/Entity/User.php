@@ -3,6 +3,7 @@ namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
 
+
 /**
  * User Entity
  *
@@ -11,6 +12,7 @@ use Cake\ORM\Entity;
  * @property string $username
  * @property string $password
  * @property string $email
+ * @property string $role
  *
  * @property \App\Model\Entity\HealthUnit[] $health_units
  */
@@ -31,6 +33,7 @@ class User extends Entity
         'username' => true,
         'password' => true,
         'email' => true,
+        'role' => true,
         'health_units' => true
     ];
 
