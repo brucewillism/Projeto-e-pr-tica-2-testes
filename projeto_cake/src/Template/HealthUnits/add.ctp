@@ -3,6 +3,7 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\HealthUnit $healthUnit
  */
+    
 ?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
@@ -16,15 +17,24 @@
     <?= $this->Form->create($healthUnit) ?>
     <fieldset>
         <legend><?= __('Add Health Unit') ?></legend>
-        <?php
-            echo $this->Form->control('name');
-            echo $this->Form->control('telephone');
-            echo $this->Form->control('CEP');
-            echo $this->Form->control('complete_address');
-            echo $this->Form->control('latitude');
-            echo $this->Form->control('longitude');
-            echo $this->Form->control('users._ids', ['options' => $users]);
-        ?>
+        <?= $this->Form->control('name'); ?>
+            <?= $this->Form->control('telephone') ?>
+            <?= $this->Form->control('CEP') ?>
+            
+            <label for="rua">Rua</label>
+            <input type="text" name="rua" id="rua"><br>
+            <label for="cidade">Cidade</label>
+            <input type="text" name="cidade" id="cidade"><br>
+            <label for="uf">Estado</label>
+            <input type="text" name="uf" id="uf"><br>
+            <label for="numero">Número</label id="numero">
+            <input type="text" name="numero"><br>
+            
+            <?= $this->Form->control('complete_address') ?>
+            <?= $this->Form->control('latitude',["readonly"=>"readonly","class"=>"esconder"]) ?>
+            <?= $this->Form->control('longitude',["readonly"=>"readonly","class"=>"esconder"]) ?>
+
+            <!-- <?= $this->Form->control('users._ids', ['options' => $users,'label'=>"administrador"]) ?> -->
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>

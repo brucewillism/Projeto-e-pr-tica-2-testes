@@ -44,6 +44,57 @@ LOCK TABLES `health_units` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `health_units_specialties`
+--
+
+DROP TABLE IF EXISTS `health_units_specialties`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `health_units_specialties` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `health_unit_id` int(10) unsigned NOT NULL,
+  `specialtie_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `health_unit_id` (`health_unit_id`,`specialtie_id`),
+  KEY `specialtie_id` (`specialtie_id`),
+  CONSTRAINT `health_units_specialties_ibfk_1` FOREIGN KEY (`health_unit_id`) REFERENCES `health_units` (`id`),
+  CONSTRAINT `health_units_specialties_ibfk_2` FOREIGN KEY (`specialtie_id`) REFERENCES `specialties` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `health_units_specialties`
+--
+
+LOCK TABLES `health_units_specialties` WRITE;
+/*!40000 ALTER TABLE `health_units_specialties` DISABLE KEYS */;
+/*!40000 ALTER TABLE `health_units_specialties` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `specialties`
+--
+
+DROP TABLE IF EXISTS `specialties`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `specialties` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `specialties`
+--
+
+LOCK TABLES `specialties` WRITE;
+/*!40000 ALTER TABLE `specialties` DISABLE KEYS */;
+/*!40000 ALTER TABLE `specialties` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `users`
 --
 
@@ -54,10 +105,10 @@ CREATE TABLE `users` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   `username` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL,
+  `password` varchar(500) DEFAULT NULL,
   `email` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -66,6 +117,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (2,'Thiago Vinícius Oliveira De Matos Rodrigues','thiago','$2y$10$8qa9PsBvpLmfG3O49Nglfedc9iJCZh9kOn4HWs8w5H/ptNnnGGcEi','tvnicius782@gmail.com');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -106,4 +158,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-20 19:36:22
+-- Dump completed on 2018-04-26 18:55:27
