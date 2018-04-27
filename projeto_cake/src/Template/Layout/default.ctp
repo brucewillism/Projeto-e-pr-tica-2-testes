@@ -13,13 +13,8 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-<<<<<<< HEAD
-$cakeDescription = 'CakePHP: the rapid development php framework';
 $title = "clinikit";
-=======
 $cakeDescription = 'Clinikit';
-$titulo = 'Clinikit';
->>>>>>> 51c73bd834e2f159a790b1e04a4d0b52f1482d0c
 ?>
 <!DOCTYPE html>
 <html>
@@ -46,23 +41,17 @@ $titulo = 'Clinikit';
     <?= $this->fetch('script') ?>
 </head>
 <body>
-<<<<<<< HEAD
-    <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
-            <li class="name">
-                <h1><a href="/"><?= $title ?></a></h1>
-=======
+
     <nav class="navbar navbar-expand-sm" role="navigation">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <h4><a href=""><?= $titulo ?></a></h4>
+                <h4><a href="/"><?= $title ?></a></h4>
             </li>
             <li class="nav-item">
                 <a class="nav-link" target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" target="_blank" href="https://api.cakephp.org/3.0/">API</a>
->>>>>>> 51c73bd834e2f159a790b1e04a4d0b52f1482d0c
             </li>
         </ul>
     </nav>
