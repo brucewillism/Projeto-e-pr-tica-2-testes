@@ -7,21 +7,9 @@
 </div>
 <div class="jumbotron">
 
-	
 	<?php foreach ($unidades as $unidade): ?>
-		<li><?= $unidade['name'] ?></li>
+		<li id="list"><?= $unidade['name'] ?></li>
 	<?php endforeach ?>
 	
-
-
-		<!-- <li id="list" >Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</li>
-		<li id="list" >Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</li>
-		<li id="list" >Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</li>
-		<li id="list" >Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</li>
-		<li id="list" >Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</li>
-		<li id="list" >Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</li>
-		<li id="list" >Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</li>
-		<li id="list" >Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</li>
-		<li id="list" >Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</li> --> 
 	
 </div>

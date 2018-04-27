@@ -45,24 +45,29 @@ class PagesController extends AppController
             $unidade = $this->loadModel('HealthUnits');
             $palavra = "%".$this->request->getQuery('palavra')."%";
             
-            // $unidades = $unidade->find("all")->where("'HealthUnits.complete_address LIKE'=> $palavra"
-            // );
-            
             $unidades = $unidade->find('all',
                 ['conditions'=>
                     [
-                        'HealthUnits.complete_address LIKE'=> $palavra
+                        "OR"=>[
+                            'HealthUnits.name LIKE'=> $palavra,
+                            'HealthUnits.complete_address LIKE'=> $palavra,
+                        ]
                     ],
-                    [
-                        'HealthUnits.name LIKE'=> $palavra
-                    ]
+                    'order'=>['HealthUnits.name'=>'ASC'],
+                    'limit'=>10
                 ]
             );
             $this->set("unidades",$unidades->toArray());
+             $this->set("palavra",$palavra);
 
         }else{
             $unidade = $this->loadModel('HealthUnits');
-            $unidades = $unidade->find('all');
+            $unidades = $unidade->find('all',
+                [
+                'limit'=>10,
+                'order'=>['HealthUnits.name'=>'ASC']
+                ]              
+            );
             $this->set("unidades",$unidades->toArray());
         }
         

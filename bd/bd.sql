@@ -31,7 +31,7 @@ CREATE TABLE `health_units` (
   `latitude` varchar(100) DEFAULT NULL,
   `longitude` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,6 +40,7 @@ CREATE TABLE `health_units` (
 
 LOCK TABLES `health_units` WRITE;
 /*!40000 ALTER TABLE `health_units` DISABLE KEYS */;
+INSERT INTO `health_units` VALUES (1,'Policlínica São Lucas','8135431722','53635-110','Rua Dr. Augusto Vaz de Oliveira, 65 - Cruz de Rebouças, Igarassu - PE, 53635-140, Brasil','-7.8721706','-34.9070126'),(2,'Unidade de Saúde da Família Bonfim I','(81)35454819','53637-550','Av. Rubina, 73 - Santa Luzia, Igarassu - PE, 53637-550, Brasil','-7.880873999999999','-34.907222');
 /*!40000 ALTER TABLE `health_units` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -158,4 +159,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-26 18:55:27
+-- Dump completed on 2018-04-27  8:55:41
