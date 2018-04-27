@@ -39,7 +39,34 @@ class PagesController extends AppController
      *   be found or \Cake\View\Exception\MissingTemplateException in debug mode.
      */
     public function display(...$path)
-    {
+    {   
+
+        if($this->request->getQuery('palavra')){
+            $unidade = $this->loadModel('HealthUnits');
+            $palavra = "%"+$this->request->getQuery('palavra')+"%";
+            
+            $unidades = $unidade->find("all")->where("'HealthUnits.complete_address LIKE'=>"+$palavra
+            );
+            
+            // $unidades = $unidade->find('all',
+            //     ['conditions'=>
+            //         [
+            //             'HealthUnits.complete_address LIKE'=> $palavra
+            //         ],
+            //         [
+            //             'HealthUnits.name LIKE'=> $palavra
+            //         ]
+            //     ]
+            // );
+            $this->set("unidades",$unidades->toArray());
+
+        }else{
+            $unidade = $this->loadModel('HealthUnits');
+            $unidades = $unidade->find('all');
+            $this->set("unidades",$unidades->toArray());
+        }
+        
+
         $count = count($path);
         if (!$count) {
             return $this->redirect('/');

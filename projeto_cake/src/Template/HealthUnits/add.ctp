@@ -3,8 +3,11 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\HealthUnit $healthUnit
  */
-    
 ?>
+<?= $this->Html->script("cadastro.js") ?>
+<?= $this->Html->script("cadastro-lat-lng.js") ?>
+<?= $this->fetch("script")?>
+
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
@@ -22,17 +25,17 @@
             <?= $this->Form->control('CEP') ?>
             
             <label for="rua">Rua</label>
-            <input type="text" name="rua" id="rua"><br>
+            <input type="text" name="rua" id="rua" disabled="true"><br>
             <label for="cidade">Cidade</label>
-            <input type="text" name="cidade" id="cidade"><br>
+            <input type="text" name="cidade" id="cidade" disabled="true"><br>
             <label for="uf">Estado</label>
-            <input type="text" name="uf" id="uf"><br>
-            <label for="numero">Número</label id="numero">
-            <input type="text" name="numero"><br>
+            <input type="text" name="uf" id="uf" disabled="true"><br>
+            <label for="numero">Número</label>
+            <input type="text" name="numero" id="numero" disabled="true"><br>
             
-            <?= $this->Form->control('complete_address') ?>
-            <?= $this->Form->control('latitude',["readonly"=>"readonly","class"=>"esconder"]) ?>
-            <?= $this->Form->control('longitude',["readonly"=>"readonly","class"=>"esconder"]) ?>
+            <?= $this->Form->control('complete_address',["id"=>"complet","readonly"=>"readonly"]) ?>
+            <?= $this->Form->control('latitude',["readonly"=>"readonly","class"=>"esconder","id"=>"latitude"]) ?>
+            <?= $this->Form->control('longitude',["readonly"=>"readonly","class"=>"esconder","id"=>"longitude"]) ?>
 
             <!-- <?= $this->Form->control('users._ids', ['options' => $users,'label'=>"administrador"]) ?> -->
     </fieldset>
