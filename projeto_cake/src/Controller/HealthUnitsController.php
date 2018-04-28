@@ -35,8 +35,9 @@ class HealthUnitsController extends AppController
     public function view($id = null)
     {
         $healthUnit = $this->HealthUnits->get($id, [
-            'contain' => ['Users']
+            'contain' => ['Specialties']
         ]);
+
 
         $this->set('healthUnit', $healthUnit);
     }

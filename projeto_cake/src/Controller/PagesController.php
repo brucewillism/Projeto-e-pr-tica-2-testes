@@ -41,9 +41,9 @@ class PagesController extends AppController
     public function display(...$path)
     {   
 
-        if($this->request->getQuery('palavra')){
+        if($this->request->getQuery('search')){
             $unidade = $this->loadModel('HealthUnits');
-            $palavra = "%".$this->request->getQuery('palavra')."%";
+            $palavra = "%".$this->request->getQuery('search')."%";
             
             $unidades = $unidade->find('all',
                 ['conditions'=>
@@ -60,7 +60,8 @@ class PagesController extends AppController
             $this->set("unidades",$unidades->toArray());
              $this->set("palavra",$palavra);
 
-        }else{
+        }
+        else{
             $unidade = $this->loadModel('HealthUnits');
             $unidades = $unidade->find('all',
                 [

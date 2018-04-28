@@ -41,6 +41,12 @@ class HealthUnitsTable extends Table
             'targetForeignKey' => 'user_id',
             'joinTable' => 'users_health_units'
         ]);
+
+        $this->belongsToMany('Specialties', [
+            'foreignKey' => 'health_unit_id',
+            'targetForeignKey' => 'specialtie_id',
+            'joinTable' => 'health_units_specialties'
+        ]);
     }
 
     /**

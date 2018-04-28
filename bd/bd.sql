@@ -60,7 +60,7 @@ CREATE TABLE `health_units_specialties` (
   KEY `specialtie_id` (`specialtie_id`),
   CONSTRAINT `health_units_specialties_ibfk_1` FOREIGN KEY (`health_unit_id`) REFERENCES `health_units` (`id`),
   CONSTRAINT `health_units_specialties_ibfk_2` FOREIGN KEY (`specialtie_id`) REFERENCES `specialties` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,6 +69,7 @@ CREATE TABLE `health_units_specialties` (
 
 LOCK TABLES `health_units_specialties` WRITE;
 /*!40000 ALTER TABLE `health_units_specialties` DISABLE KEYS */;
+INSERT INTO `health_units_specialties` VALUES (1,1,2),(2,1,3);
 /*!40000 ALTER TABLE `health_units_specialties` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -83,7 +84,7 @@ CREATE TABLE `specialties` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -92,6 +93,7 @@ CREATE TABLE `specialties` (
 
 LOCK TABLES `specialties` WRITE;
 /*!40000 ALTER TABLE `specialties` DISABLE KEYS */;
+INSERT INTO `specialties` VALUES (2,'Pediatria'),(3,'Odontologia');
 /*!40000 ALTER TABLE `specialties` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -159,4 +161,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-27  8:55:41
+-- Dump completed on 2018-04-28 18:20:02
