@@ -17,16 +17,16 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('name') ?></th>
+<!--                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
+ -->                <th scope="col"><?= $this->Paginator->sort('name') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($specialties as $specialty): ?>
             <tr>
-                <td><?= $this->Number->format($specialty->id) ?></td>
-                <td><?= h($specialty->name) ?></td>
+<!--                 <td><?= $this->Number->format($specialty->id) ?></td>
+ -->                <td><?= h($specialty->name) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $specialty->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $specialty->id]) ?>

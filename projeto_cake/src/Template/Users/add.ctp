@@ -21,7 +21,7 @@
             echo $this->Form->control('username');
             echo $this->Form->control('password');
             echo $this->Form->control('email');           
-            echo $this->Form->control('health_units._ids', ['options' => $healthUnits]);
+            // echo $this->Form->control('health_units._ids', ['options' => $healthUnits]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

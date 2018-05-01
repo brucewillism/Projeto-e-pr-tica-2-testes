@@ -7,7 +7,7 @@
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New Health Unit'), ['action' => 'add']) ?></li>
+        <li><?= $this->Html->link(__('Nova unidade de Saúde'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Users'), ['controller' => 'Users', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
     </ul>
@@ -17,20 +17,18 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
-                <th scope="col"><?= $this->Paginator->sort('id') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('name') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('telephone') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('nome') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('telefone') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('CEP') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('complete_address') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('endereço') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('latitude') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('longitude') ?></th>
-                <th scope="col" class="actions"><?= __('Actions') ?></th>
+                <th scope="col" class="actions"><?= __('ações') ?></th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($healthUnits as $healthUnit): ?>
             <tr>
-                <td><?= $this->Number->format($healthUnit->id) ?></td>
                 <td><?= h($healthUnit->name) ?></td>
                 <td><?= h($healthUnit->telephone) ?></td>
                 <td><?= h($healthUnit->CEP) ?></td>
