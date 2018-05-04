@@ -16,12 +16,12 @@
         <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="healthUnits form large-9 medium-8 columns content">
+<div class="healthUnits form large-6 medium-8 container content">
     <?= $this->Form->create($healthUnit) ?>
     <fieldset>
-        <legend><?= __('Add Health Unit') ?></legend>
-        <?= $this->Form->control('name'); ?>
-            <?= $this->Form->control('telephone') ?>
+        <legend><?= __('Add') ?></legend>
+        <?= $this->Form->control('name', ['label'=>'Nome']); ?>
+            <?= $this->Form->control('telephone', ['label'=>'Telefone']) ?>
             <?= $this->Form->control('CEP') ?>
             
             <label for="rua">Rua</label>

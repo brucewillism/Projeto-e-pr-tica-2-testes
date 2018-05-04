@@ -51,7 +51,7 @@ $cakeDescription = 'Clinikit';
                 <a class="nav-link" target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" target="_blank" href="https://api.cakephp.org/3.0/">API</a>
+                <a type="nav-item" <?= $this->Html->link(__('logout'), ['controller'=>' users', 'action' =>'logout']) ?> </a>
             </li>
         </ul>
     </nav>
