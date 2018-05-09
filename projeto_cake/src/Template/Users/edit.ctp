@@ -18,17 +18,23 @@
         <li><?= $this->Html->link(__('New Health Unit'), ['controller' => 'HealthUnits', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="users form large-9 medium-8 columns content">
+<div class="users form large-5 medium-8 container content">
     <?= $this->Form->create($user) ?>
     <fieldset>
-        <legend><?= __('Edit User') ?></legend>
+        <legend><?= __('Editar perfil') ?></legend>
         <?php
+<<<<<<< HEAD
             echo $this->Form->control('name',['label'=>'Nome']);
             echo $this->Form->control('username',['label'=>'Usuário']);
             echo $this->Form->control('password',['label'=>'Senha']);
+=======
+            echo $this->Form->control('name', ['label'=>'Nome']);
+            echo $this->Form->control('username', ['label'=>'Usuário']);
+            echo $this->Form->control('password', ['label'=>'Senha']);
+>>>>>>> 32701ffc621c4457458f5bf21c0ca2e6145d7820
             echo $this->Form->control('email');
             
-            echo $this->Form->control('health_units._ids', ['options' => $healthUnits]);
+            // echo $this->Form->control('health_units._ids', ['options' => $healthUnits]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

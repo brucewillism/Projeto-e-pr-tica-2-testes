@@ -12,13 +12,13 @@
         <li><?= $this->Html->link(__('New Health Unit'), ['controller' => 'HealthUnits', 'action' => 'add']) ?></li>
     </ul>
 </nav>
-<div class="specialties form large-9 medium-8 columns content">
+<div class="specialties form large-6 medium-5 container content">
     <?= $this->Form->create($specialty) ?>
     <fieldset>
-        <legend><?= __('Add Specialty') ?></legend>
+        <legend><?= __('Serviços') ?></legend>
         <?php
-            echo $this->Form->control('name');
-            echo $this->Form->control('health_units._ids', ['options' => $healthUnits]);
+            echo $this->Form->control('name' , ['label'=>'Nome']);
+            echo $this->Form->control('health_units._ids', ['options' => $healthUnits] );
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

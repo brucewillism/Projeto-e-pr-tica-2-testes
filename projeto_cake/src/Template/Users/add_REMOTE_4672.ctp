@@ -12,17 +12,10 @@
         <li><?= $this->Html->link(__('New Health Unit'), ['controller' => 'HealthUnits', 'action' => 'add']) ?></li>
     </ul>
 </nav> -->
-<<<<<<< HEAD
-<div class="users form large-5 medium-8 container content">
-    <?= $this->Form->create($user) ?>
-    <fieldset>
-        <legend><?= __('Cadastro') ?></legend>
-=======
 <div class="users form large-4 medium-7 container  content">
     <?= $this->Form->create($user) ?>
     <fieldset>
         <legend><?= __('Cadastrar') ?></legend>
->>>>>>> 32701ffc621c4457458f5bf21c0ca2e6145d7820
         <?php
             echo $this->Form->control('name', ['label'=>'Nome']);
             echo $this->Form->control('username', ['label'=>'Usuario']);
