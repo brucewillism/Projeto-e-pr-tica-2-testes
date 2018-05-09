@@ -23,9 +23,9 @@
     <fieldset>
         <legend><?= __('Edit User') ?></legend>
         <?php
-            echo $this->Form->control('name');
-            echo $this->Form->control('username');
-            echo $this->Form->control('password');
+            echo $this->Form->control('name',['label'=>'Nome']);
+            echo $this->Form->control('username',['label'=>'Usuário']);
+            echo $this->Form->control('password',['label'=>'Senha']);
             echo $this->Form->control('email');
             
             echo $this->Form->control('health_units._ids', ['options' => $healthUnits]);

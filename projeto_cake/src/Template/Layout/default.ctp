@@ -1,4 +1,4 @@
-<?php
+<!-- <?php 
 /**
  * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
@@ -13,8 +13,8 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-$title = "clinikit";
-$cakeDescription = 'Clinikit';
+// $title = "clinikit";
+// $cakeDescription = 'Clinikit';
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,10 +36,10 @@ $cakeDescription = 'Clinikit';
     <?= $this->Html->css('style.css') ?>
     <!-- <?= $this->Html->script("jquery/jquery-3.2.1.min.js") ?> -->
 
-    <?= $this->fetch('meta') ?>
+   <!--  <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?>
-</head>
+    <?= $this->fetch('script') ?> -->
+<!-- </head>
 <body>
 
     <nav class="navbar navbar-expand-sm" role="navigation">
@@ -55,11 +55,78 @@ $cakeDescription = 'Clinikit';
             </li>
         </ul>
     </nav>
-    <?= $this->Flash->render() ?>
-    <div class="container clearfix">
-        <?= $this->fetch('content') ?>
-    </div>
+
     <footer>
     </footer>
 </body>
 </html>
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- css -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="plugins/cubeportfolio/css/cubeportfolio.min.css">
+  <link href="css/nivo-lightbox.css" rel="stylesheet" />
+  <link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
+  <link href="css/owl.carousel.css" rel="stylesheet" media="screen" />
+  <link href="css/owl.theme.css" rel="stylesheet" media="screen" />
+  <link href="css/animate.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- boxed bg -->
+  <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
+  <!-- template skin -->
+  <link id="t-colors" href="color/default.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+
+
+  <div id="wrapper">
+
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <div class="top-area">
+        <div class="container">
+          <div class="row">
+          </div>
+        </div>
+      </div>
+      <div class="container navigation">
+
+        <div class="navbar-header page-scroll">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+          <a class="navbar-brand" href="index.html">
+                    <img src="img/logo.jpeg" alt="" width="150" height="40" />
+                </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#intro">Início</a></li>
+            <li><a href="#service">Pesquisa</a></li>
+            <li><a href="#equipe">Quem somos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+    </nav>
+
+    <?= $this->Flash->render() ?>
+    <div class="container clearfix">
+        
+        <?= $this->fetch('content') ?>
+    </div>
