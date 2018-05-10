@@ -794,7 +794,7 @@ hr.bold {
 }
 
 .intro-content {
-	background: url(../img/dummy/bg1.jpg) no-repeat top center;
+	/*background: url(../img/dummy/bg1.jpg) no-repeat top center;*/
 	padding:200px 0 60px;
 }
 .intro-content.intro-nobg {
@@ -2114,10 +2114,34 @@ a.btn:focus{
 	.navbar-brand {
 		text-align: center;
 		display: block;
-		margin: 0 auto;
+		/*margin: 0 auto;*/
 	}
 	
 	.intro-content {
 		padding:250px 0 0;
 	}
 }
+
+.view{
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+table,td,tr,th{
+  border: 3px solid lightblue;
+  border-collapse: collapse;
+}
+td,th{
+  text-align: center;
+  padding: 10px;
+}
+
+.resultado{
+  font-weight: bold;
+  /*list-style: none;*/
+  text-align: left;
+}
+/*.resultado li a{*/
+  /*color: #5a76bb;*/
+
+/*}*/
