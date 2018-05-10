@@ -1,4 +1,4 @@
-<!-- <?php 
+<?php
 /**
  * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
  * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
@@ -13,63 +13,15 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-// $title = "clinikit";
-// $cakeDescription = 'Clinikit';
+$title = "INFOPOSTO";
+$cakeDescription = "INFOPOSTO";
 ?>
 <!DOCTYPE html>
 <html>
 <head>
     <?= $this->Html->charset() ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <title>
-        <?= $cakeDescription ?>:
-        <?= $this->fetch('title') ?>
-    </title>
-    <?= $this->Html->meta('icon') ?>
-
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('style.css') ?>
-    <!-- <?= $this->Html->script("jquery/jquery-3.2.1.min.js") ?> -->
-
-   <!--  <?= $this->fetch('meta') ?>
-    <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?> -->
-<!-- </head>
-<body>
-
-    <nav class="navbar navbar-expand-sm" role="navigation">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <h4><a href="/"><?= $title ?></a></h4>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a>
-            </li>
-            <li class="nav-item">
-                <a type="nav-item" <?= $this->Html->link(__('logout'), ['controller'=>' users', 'action' =>'logout']) ?> </a>
-            </li>
-        </ul>
-    </nav>
-
-    <footer>
-    </footer>
-</body>
-</html>
- -->
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
   <!-- css -->
   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -85,10 +37,23 @@
   <link id="bodybg" href="bodybg/bg1.css" rel="stylesheet" type="text/css" />
   <!-- template skin -->
   <link id="t-colors" href="color/default.css" rel="stylesheet">
+    <title>
+        <?= $cakeDescription ?>:
+        <?= $this->fetch('title') ?>
+    </title>
+    <!-- <?= $this->Html->meta('icon') ?>
 
+    <?= $this->Html->css('base.css') ?>
+    <?= $this->Html->css('style.css') ?>
+   <?= $this->Html->script("jquery/jquery-3.2.1.min.js") ?> 
+
+    <?= $this->fetch('meta') ?>
+    <?= $this->fetch('css') ?>
+    <?= $this->fetch('script') ?> -->
 </head>
+<body>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+   <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
 
 
   <div id="wrapper">
@@ -127,6 +92,79 @@
 
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
-        
         <?= $this->fetch('content') ?>
     </div>
+    <footer>
+        <section id="contato">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+            </div>
+            <div class="wow fadeInDown" data-wow-delay="0.1s">
+              <div class="widget">
+                <p></p>
+                <center>
+                  <h3 id="contato" class="h-bold text-center">Envie-nos uma mensagem!</h3>
+                </center>
+                <center>
+                  <form  autocomplete="off">
+                    <fieldset>
+                      <label>Nome:</label><br><input class="cssinput" type="text"><br>
+                      <label>Assunto:</label><br><input class="cssinput" type="text"><br>
+                      <label>Mensagem:</label><br><textarea class="csstextarea" cols="35" rows="8"></textarea><br>
+                      <input class="btn_submit" type="submit" value="Enviar">
+                    </fieldset>
+                  </form>
+                </center>
+                <br>
+                <h5>Conecte-se</h5>
+                <ul class="company-social">
+                  <li class="social-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li class="social-twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li class="social-google"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                  <li class="social-vimeo"><a href="#"><i class="fa fa-vimeo-square"></i></a></li>
+                  <li class="social-dribble"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sub-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6">
+              <div class="wow fadeInLeft" data-wow-delay="0.1s">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </footer>
+     </div>
+  <a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+
+  <!-- Core JavaScript Files -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/jquery.scrollTo.js"></script>
+  <script src="js/jquery.appear.js"></script>
+  <script src="js/stellar.js"></script>
+  <script src="plugins/cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/nivo-lightbox.min.js"></script>
+  <script src="js/custom.js"></script>
+
+</body>
+</html>
