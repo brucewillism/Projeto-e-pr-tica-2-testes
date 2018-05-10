@@ -44,12 +44,12 @@ $cakeDescription = "INFOPOSTO";
     <!-- <?= $this->Html->meta('icon') ?>
 
     <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('style.css') ?>
+    <?= $this->Html->css('style.css') ?>-->
    <?= $this->Html->script("jquery/jquery-3.2.1.min.js") ?> 
 
     <?= $this->fetch('meta') ?>
-    <?= $this->fetch('css') ?>
-    <?= $this->fetch('script') ?> -->
+    <!--<?= $this->fetch('css') ?>-->
+    <?= $this->fetch('script') ?> 
 </head>
 <body>
 

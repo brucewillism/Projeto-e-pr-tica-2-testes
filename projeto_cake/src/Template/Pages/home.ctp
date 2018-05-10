@@ -31,7 +31,7 @@
         </div>
       </div>
     </section>
-  <hr>
+ 
     <section id="service" class="home-section paddingtop-80">
       <div class="container">
         <div class="row">
@@ -61,7 +61,7 @@
       </div>
     </section>
 
-    <hr>
+
     <section id="equipe" class="home-section bg-gray paddingbot-60">
       <div class="container marginbot-50">
         <div class="row">
@@ -171,7 +171,7 @@
         </div>
       </div>
     </section>
-    <hr>
+   
 	
 	
 </div>
