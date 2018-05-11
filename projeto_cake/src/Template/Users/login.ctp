@@ -1,5 +1,5 @@
 
-<div class="users form large-4 medium-8 container content	">
+<div class="users view form large-4 medium-8 container content	">
 <?= $this->Flash->render('Auth') ?>
 <?= $this->Form->create() ?>
 	<fieldset>
