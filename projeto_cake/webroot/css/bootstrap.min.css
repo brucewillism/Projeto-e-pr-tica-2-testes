@@ -76,6 +76,20 @@ hr{
     -moz-box-sizing:content-box;
     box-sizing:content-box
 }
+
+.cssinputo{   
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow: 1px 1px 2px #333333;    
+    -moz-box-shadow: 1px 1px 2px #333333;
+    -webkit-box-shadow: 1px 1px 2px #333333;
+    background: white; 
+    border:1px solid #000000;
+    width:20em;
+    height: 2em;
+}
+
 pre{
     overflow:auto
 }
@@ -85,8 +99,8 @@ code,kbd,pre,samp{
 }
 button,input,optgroup,select,textarea{
     margin:0;
-    font:inherit;
-    color:inherit
+   
+    
 }
 button{
     overflow:visible
@@ -1752,7 +1766,7 @@ pre code{
         width:58.33333333%
     }
     .col-lg-6{
-        width:80em;
+        width:75em;
     }
     .col-lg-5{
         width:41.66666667%

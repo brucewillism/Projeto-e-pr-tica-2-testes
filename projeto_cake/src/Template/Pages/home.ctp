@@ -45,13 +45,13 @@
         <div class="row">
           <div class="col-lg-6 text-center">
           <center>
-            <h4 class="h-bold">Insira abaixo: Serviços que você procura/Município/Rua/CEP de um posto de saúde, para que possamos lhe ajudar.</h4>
+            <h2 class="h-bold">Pesquise o que você procura (Serviços,Unidades,Município...)</h2>
           </center>
           <div class="container-fluid">
            
            <form class="form-inline" action="#service" method="GET">
-            <input class="form-control rounded" name="search" type="text" placeholder="Unidade de saude">
-            <button class="rounded" type="submit"><i class="fa fa-search fa-2x"></i></button>
+            <input class="cssinputo" name="search" type="text" placeholder="Unidade de saude">
+            <button class="sucs" type="submit"><i class="fa fa-search fa-2x"></i></button>
             <button>
             <?= $this->Html->link(__('Limpar pesquisa'),'/#service') ?>
             </button>
@@ -82,115 +82,17 @@
           </div>
         </div>
         <div class="divider-short"></div>
+        <img src="../css/img/team/2.jpg">
+        <img src="">
+        <img src="">
+        <center>
+        <p> Bruce Willis &nbsp;&nbsp;&nbsp; Jullyana Maria &nbsp;&nbsp;&nbsp; Maurício Lee &nbsp;&nbsp;&nbsp; Milena Lins &nbsp;&nbsp;&nbsp; Wanderson josé </p>
+        <hr>
+        </center>
       </div>
     </div>
   </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div id="grid-container" class="cbp-l-grid-team">
-          <ul>
-            <li>
-              <a href class="cbp-singlePage cbp-l-grid-team-name">Bruce Wilis</a>
-              <div class="cbp-l-grid-team-position"></div>
-            </li>
-            <div class="cbp-caption-defaultWrap">
-              <img src="img/team/2.jpg" alt="" width="100%">
-            </div>
-            <div class="cbp-caption-activeWrap">
-              <div class="cbp-l-caption-alignCenter">
-                <div class="cbp-l-caption-body">
-                  <div class="cbp-l-caption-text">Infraestrutura</div>
-                </div>
-
-    <section id="equipe" class="home-section bg-gray paddingbot-60">
-      <div class="container marginbot-50">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="wow fadeInDown" data-wow-delay="0.1s">
-              <div class="section-heading text-center">
-                <h2 class="h-bold">Equipe</h2>
-              </div>
-            </div>
-            <!-- </a> -->
-            <li>
-              <a href class="cbp-singlePage cbp-l-grid-team-name">Julyana Maria</a>
-              <div class="cbp-l-grid-team-position"></div>
-            </li>
-            <div class="cbp-caption-defaultWrap">
-              <img src="img/team/2.jpg" alt="" width="100%">
-            </div>
-            <div class="cbp-caption-activeWrap">
-              <div class="cbp-l-caption-alignCenter">
-                <div class="cbp-l-caption-body">
-                  <div class="cbp-l-caption-text">Front-end</div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href class="cbp-singlePage cbp-l-grid-team-name">Maurício Lee</a>
-          <div class="cbp-l-grid-team-position"></div>
-        </li>
-        <div class="cbp-caption-defaultWrap">
-          <img src="img/team/2.jpg" alt="" width="100%">
-        </div>
-        <div class="cbp-caption-activeWrap">
-          <div class="cbp-l-caption-alignCenter">
-            <div class="cbp-l-caption-body">
-              <div class="cbp-l-caption-text">Comunicação</div>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href class="cbp-singlePage cbp-l-grid-team-name">Milena Lins</a>
-      <div class="cbp-l-grid-team-position"></div>
-    </li>
-    <div class="cbp-caption-defaultWrap">
-      <img src="img/team/2.jpg" alt="" width="100%">
-    </div>
-    <div class="cbp-caption-activeWrap">
-      <div class="cbp-l-caption-alignCenter">
-        <div class="cbp-l-caption-body">
-          <div class="cbp-l-caption-text">Front-end/Back-end</div>
-        </div>
-      </div>
-    </div>
-  </a>
-  <a href class="cbp-singlePage cbp-l-grid-team-name">Thiago Vinícius</a>
-  <div class="cbp-l-grid-team-position"></div>
-</li>
-<div class="cbp-caption-defaultWrap">
-  <img src="img/team/2.jpg" alt="" width="100%">
-</div>
-<div class="cbp-caption-activeWrap">
-  <div class="cbp-l-caption-alignCenter">
-    <div class="cbp-l-caption-body">
-      <div class="cbp-l-caption-text">Back-end</div>
-    </div>
-  </div>
-</div>
-<!-- </a> -->
-<a href class="cbp-singlePage cbp-l-grid-team-name">Wandeson José</a>
-<div class="cbp-l-grid-team-position"></div>
-</li>
-<div class="cbp-caption-defaultWrap">
-  <img src="img/team/2.jpg" alt="" width="100%">
-</div>
-<div class="cbp-caption-activeWrap">
-  <div class="cbp-l-caption-alignCenter">
-    <div class="cbp-l-caption-body">
-      <div class="cbp-l-caption-text">Infraestrutura/Front-end</div>
-    </div>
-  </div>
-</div>
-
-<!-- </a> -->
-</ul>
-</div>
-</div>
-</div>
-</div>
+   
 </section>
 
 

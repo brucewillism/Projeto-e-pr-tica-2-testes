@@ -8,7 +8,40 @@
 /* ==== Google font ==== */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,700,800|Roboto:400,500,700,900');
 /* --- pe-icon-7-stroke --- */
+.sucs {
+   background: #3BE5FF;
+   background-image: -webkit-linear-gradient(top, #3BE5FF, #3BE5FF);
+   background-image: -moz-linear-gradient(top, #3BE5FF, #3BE5FF);
+   background-image: -ms-linear-gradient(top, #3BE5FF, #3BE5FF);
+   background-image: -o-linear-gradient(top, #3BE5FF, #3BE5FF);
+   background-image: linear-gradient(to bottom, #3BE5FF, #3BE5FF);
+   -webkit-border-radius: 20px;
+   -moz-border-radius: 20px;
+   border-radius: 20px;
+   color: #FFFFFF;
+   font-family: Open Sans;
+   font-size: 11px;
+   font-weight: 100;
+   padding: 28px;
+   box-shadow: 1px 1px 20px 0px #000000;
+   -webkit-box-shadow: 1px 1px 20px 0px #000000;
+   -moz-box-shadow: 1px 1px 20px 0px #000000;
+   text-shadow: 1px 1px 20px #000000;
+   border: solid #000000 1px;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+}
 
+.sucs:hover {
+   background: #1BBED0;
+   background-image: -webkit-linear-gradient(top, #1BBED0, #1BBED0);
+   background-image: -moz-linear-gradient(top, #1BBED0, #1BBED0);
+   background-image: -ms-linear-gradient(top, #1BBED0, #1BBED0);
+   background-image: -o-linear-gradient(top, #1BBED0, #1BBED0);
+   background-image: linear-gradient(to bottom, #1BBED0, #1BBED0);
+   text-decoration: none;
+}
 .cssinput{   
     border-radius:4px;
     -moz-border-radius:4px;
@@ -39,8 +72,8 @@
 hr {
       color: #3fbbc0;
       background-color: #3fbbc0;
-      height: 5em;
-      width: 5em;
+      height: 0.2em;
+      width: 38em;
       
     }
  
@@ -2128,7 +2161,7 @@ a.btn:focus{
 }
 
 table,td,tr,th{
-  border: 3px solid lightblue;
+  border: 3px solid rgb(63, 187, 192);
   border-collapse: collapse;
 }
 td,th{
