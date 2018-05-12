@@ -69,7 +69,7 @@ class HealthUnitsTable extends Table
 
         $validator
             ->scalar('telephone')
-            ->maxLength('telephone', 15)
+            ->maxLength('telephone', 15);
             // ->requirePresence('telephone', 'create')
             // ->notEmpty('telephone');
 
