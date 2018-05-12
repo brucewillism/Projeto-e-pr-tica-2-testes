@@ -69,9 +69,9 @@ class HealthUnitsTable extends Table
 
         $validator
             ->scalar('telephone')
-            ->maxLength('telephone', 12)
-            ->requirePresence('telephone', 'create')
-            ->notEmpty('telephone');
+            ->maxLength('telephone', 15)
+            // ->requirePresence('telephone', 'create')
+            // ->notEmpty('telephone');
 
         $validator
             ->scalar('CEP')
