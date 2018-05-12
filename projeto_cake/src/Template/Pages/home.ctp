@@ -82,9 +82,8 @@
           </div>
         </div>
         <div class="divider-short"></div>
-        <img src="../css/img/team/2.jpg">
-        <img src="">
-        <img src="">
+        <!-- <img src="../css/img/team/2.jpg"> -->
+        <!-- <?= $this->Html->image('team/2.jpg') ?> -->
         <center>
         <p> Bruce Willis &nbsp;&nbsp;&nbsp; Jullyana Maria &nbsp;&nbsp;&nbsp; Maurício Lee &nbsp;&nbsp;&nbsp; Milena Lins &nbsp;&nbsp;&nbsp; Wanderson josé </p>
         <hr>

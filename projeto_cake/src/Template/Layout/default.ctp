@@ -15,6 +15,7 @@
 
 $title = "INFOPOSTO";
 $cakeDescription = "INFOPOSTO";
+$loguser = $this->request->getSession()->read("Auth.User");
 ?>
 <!DOCTYPE html>
 <html>
@@ -51,7 +52,6 @@ $cakeDescription = "INFOPOSTO";
   <!-- boxed bg -->
   <?= $this->Html->css('bodybg/bg1.css') ?>
   <!-- template skin -->
-<<<<<<< HEAD
   <?= $this->Html->css('color/default.css') ?>
   
 
@@ -64,27 +64,9 @@ $cakeDescription = "INFOPOSTO";
   <?= $this->fetch('meta') ?>
   <?= $this->fetch('css') ?>
   <?= $this->fetch('script') ?>
-=======
-  <link id="t-colors" href="color/default.css" rel="stylesheet">
-    <title>
-        <?= $cakeDescription ?>:
-        <?= $this->fetch('title') ?>
-    </title>
-    <!-- <?= $this->Html->meta('icon') ?>
-
-    <?= $this->Html->css('base.css') ?>
-    <?= $this->Html->css('style.css') ?>-->
-   <?= $this->Html->script("jquery/jquery-3.2.1.min.js") ?> 
-
-    <?= $this->fetch('meta') ?>
-    <!--<?= $this->fetch('css') ?>-->
-    <?= $this->fetch('script') ?> 
->>>>>>> 7c63f4dd7cf098651558dd375d6f0abca3b34c10
 </head>
-<body>
 
- <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-
+<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
 
   <div id="wrapper">
 
@@ -103,9 +85,9 @@ $cakeDescription = "INFOPOSTO";
           </button>
 
           <?= $this->Html->link(
-              $this->Html->image('logo.jpeg',['width'=>150,'heigth'=>40]
-            ), '/', array('escape' => false,'class'=>'navbar-brand')
-            );
+            $this->Html->image('logo.jpeg',['width'=>150,'heigth'=>40]
+          ), '/', array('escape' => false,'class'=>'navbar-brand')
+          );
           ?>
 
 
@@ -118,6 +100,10 @@ $cakeDescription = "INFOPOSTO";
             <li><a href="/#service">Pesquisa</a></li>
             <li><a href="/#equipe">Quem somos</a></li>
             <li><a href="/#contato">Contato</a></li>
+            <?php if ($loguser): ?>
+              <li><?= $this->Html->Link('Bem vindo '.explode(" ",$loguser['name'])[0],['controller'=>'users','action'=>'view',$loguser["id"]]) ?> </li>
+              <li><?= $this->Html->link('Sair',['controller' => 'Users', 'action' => 'logout']) ?></li>
+            <?php endif ?>
           </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -171,10 +157,7 @@ $cakeDescription = "INFOPOSTO";
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-</footer>
-</body>
+      </section>
+    </footer>
+  </body>
 </html>
