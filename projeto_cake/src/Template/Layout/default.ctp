@@ -116,7 +116,6 @@ $loguser = $this->request->getSession()->read("Auth.User");
       <?= $this->fetch('content') ?>
     </div>
 
-    <footer>
       <section id="contato">
         <div class="container">
           <div class="row">
@@ -130,7 +129,7 @@ $loguser = $this->request->getSession()->read("Auth.User");
             </div>
             <div class="wow fadeInDown" data-wow-delay="0.1s">
               <div class="widget">
-                <p></p>
+                <!--<p></p>
                 <center>
                   <h3 id="contato" class="h-bold text-center">Envie-nos uma mensagem!</h3>
                 </center>
@@ -144,7 +143,7 @@ $loguser = $this->request->getSession()->read("Auth.User");
                     </fieldset>
                   </form>
                 </center>
-                <br>
+                <br>-->
                 <h5>Conecte-se</h5>
                 <ul class="company-social">
                   <li class="social-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -158,6 +157,5 @@ $loguser = $this->request->getSession()->read("Auth.User");
           </div>
         </div>
       </section>
-    </footer>
   </body>
 </html>
