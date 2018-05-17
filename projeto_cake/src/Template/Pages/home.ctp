@@ -8,10 +8,10 @@
               <h1 class="h-ultra">INFOPOSTO</h1>
             </center>  
           </div>
-          <!-- <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
-            <h4 class="h-light">Nossa missão é facilitar o acesso a informações de serviços oferecidos nos postos se saúde da cidade de Igarassu. Vantagens:</h4>
-          </div> -->
-       <!--    <div class="well well-trans">
+           <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
+            <h4 class="h-light">Nossa missão é facilitar o acesso à informações de serviços oferecidos nos postos se saúde da cidade de Igarassu. Vantagens:</h4>
+          </div> 
+         <div class="well well-trans">
             <div class="wow fadeInRight" data-wow-delay="0.1s">
 
               <ul class="lead-list">
@@ -20,8 +20,8 @@
                 <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>XXX</strong><br /></span></li>
               </ul>
             </div>
-          </div> -->
-     <!--      <center>
+          </div> 
+          <center>
             <h3>Confira!</h3>
             <a href="#service"c lass="btn btn-circle js-scroll-trigger">
               <i  class="fa fa-angle-double-down animated"></i>
@@ -30,7 +30,7 @@
           </div>
         </div>
       </div>
-    </div> -->
+    </div> 
   </section>
 
   
@@ -44,21 +44,20 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 text-center">
-          <center>
-            <h2 class="h-bold">Pesquise o que você procura (Serviços,Unidades,Município...)</h2>
-          </center>
+            <center>
+              <h3 class="h-bold">Pesquise o que você procura (Serviços,Unidades,Município...)</h3>
+            </center>
           <div class="container-fluid">
            
            <form class="form-inline" action="#service" method="GET">
-            <input class="cssinputo" name="search" type="text" placeholder="Unidade de saude">
+            <input class="cssinputo" name="search" type="text" placeholder="Unidade de Saúde">
             <button class="sucs" type="submit"><i class="fa fa-search fa-2x"></i></button>
             <button>
             <?= $this->Html->link(__('Limpar pesquisa'),'/#service') ?>
             </button>
           </form>
-
-
         </div>
+        <br>
         <div class="jumbotron resultado">
          <?php foreach ($unidades as $unidade): ?>
           <li id="list">
@@ -70,6 +69,7 @@
    </div>
  </div>
 </div>
+</section>
 </section>
 
 
@@ -87,7 +87,7 @@
         <!-- <?= $this->Html->image('team/2.jpg') ?> -->
         <center>
         <p> Bruce Willis &nbsp;&nbsp;&nbsp; Jullyana Maria &nbsp;&nbsp;&nbsp; Maurício Lee &nbsp;&nbsp;&nbsp; Milena Lins &nbsp;&nbsp;&nbsp; Wandeson josé </p>
-        <hr>
+        
         </center>
       </div>
     </div>

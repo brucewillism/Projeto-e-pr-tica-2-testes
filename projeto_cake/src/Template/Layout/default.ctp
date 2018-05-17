@@ -115,7 +115,8 @@ $loguser = $this->request->getSession()->read("Auth.User");
     <div class="container clearfix">
       <?= $this->fetch('content') ?>
     </div>
-
+    <br><br>
+    <footer style="box-shadow:black">
       <section id="contato">
         <div class="container">
           <div class="row">
@@ -142,8 +143,8 @@ $loguser = $this->request->getSession()->read("Auth.User");
                       <input class="btn_submit" type="submit" value="Enviar">
                     </fieldset>
                   </form>
-                </center>
-                <br>-->
+                </center>-->
+               
                 <h5>Conecte-se</h5>
                 <ul class="company-social">
                   <li class="social-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -157,5 +158,6 @@ $loguser = $this->request->getSession()->read("Auth.User");
           </div>
         </div>
       </section>
+    </footer>
   </body>
 </html>

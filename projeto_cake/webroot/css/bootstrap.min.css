@@ -33,7 +33,8 @@ abbr[title]{
     border-bottom:1px dotted
 }
 b,strong{
-    font-weight:700
+    font-weight:700;
+    font-size: 1.2em;
 }
 dfn{
     font-style:italic
@@ -77,7 +78,8 @@ hr{
     box-sizing:content-box
 }
 
-.cssinputo{   
+.cssinputo{
+    width: 15em;   
     border-radius:4px;
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
@@ -86,8 +88,8 @@ hr{
     -webkit-box-shadow: 1px 1px 2px #333333;
     background: white; 
     border:1px solid #000000;
-    width:664px;
-    height: 44px;
+    
+    height: 2em;
 }
 
 pre{
@@ -910,12 +912,7 @@ img{
 .img-circle{
     border-radius:50%
 }
-hr{
-    margin-top:20px;
-    margin-bottom:20px;
-    border:0;
-    border-top:1px solid #eee
-}
+
 .sr-only{
     position:absolute;
     width:1px;
@@ -3920,7 +3917,8 @@ a.list-group-item.active>.badge,.nav-pills>.active>a>.badge{
     padding:30px 15px;
     margin-bottom:30px;
     color:inherit;
-    background-color:#eee
+    background-color:#F0F8FF
+
 }
 .jumbotron h1,.jumbotron .h1{
     color:inherit

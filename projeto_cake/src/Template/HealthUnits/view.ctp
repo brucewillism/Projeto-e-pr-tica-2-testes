@@ -10,11 +10,13 @@
 <div class="healthUnits view large-12 medium-8 columns content">
     <h3><?= h($healthUnit->name) ?></h3>
     <table>
+    
         <tr>
             <th scope="row"><?= __('Telefone') ?></th>
             <th scope="row"><?= __('CEP') ?></th>
             <th scope="row"><?= __('Endereço Completo') ?></th>
         </tr>
+       
         <tr>
             <td><?= h($healthUnit->telephone) ?></td>
             <td><?= h($healthUnit->CEP) ?></td>
