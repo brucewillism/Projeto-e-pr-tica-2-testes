@@ -96,10 +96,18 @@ $loguser = $this->request->getSession()->read("Auth.User");
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/#intro">Início</a></li>
-            <li><a href="/#service">Pesquisa</a></li>
-            <li><a href="/#equipe">Quem somos</a></li>
-            <li><a href="/#contato">Contato</a></li>
+            <li class="active">
+              <?= $this->Html->link("Início","/#intro") ?>
+            </li>
+            <li>
+              <?= $this->Html->link("Pesquisa","/#service") ?>
+            </li>
+            <li>
+              <?= $this->Html->Link("Quem somos","/#equipe") ?>
+            </li>
+            <li>
+              <?= $this->Html->link("Contato","/#contato") ?>
+            </li>
             <?php if ($loguser): ?>
               <li><?= $this->Html->Link('Bem vindo '.explode(" ",$loguser['name'])[0],['controller'=>'users','action'=>'view',$loguser["id"]]) ?> </li>
               <li><?= $this->Html->link('Sair',['controller' => 'Users', 'action' => 'logout']) ?></li>

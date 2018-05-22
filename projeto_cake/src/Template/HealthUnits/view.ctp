@@ -220,9 +220,9 @@
           }
             ]
         };
-
+        var img = $('<?= $this->Html->image("Hospital.png") ?>')
          var customLabel = {
-                label: '/img/Hospital.png'
+                label: img.attr('src')
         };
 
         var icon = customLabel || {};
