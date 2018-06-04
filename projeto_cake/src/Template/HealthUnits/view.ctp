@@ -15,12 +15,13 @@
             <th scope="row"><?= __('Telefone') ?></th>
             <th scope="row"><?= __('CEP') ?></th>
             <th scope="row"><?= __('Endereço Completo') ?></th>
-        </tr>
-       
+            <th scope="row"><?= __('Horário de Atendimento') ?></th>
+        
         <tr>
             <td><?= h($healthUnit->telephone) ?></td>
             <td><?= h($healthUnit->CEP) ?></td>
             <td><?= h($healthUnit->complete_address) ?></td>
+            <td><?= h($healthUnit->business_hours)?></td>
         </tr>
     </table>
     <br>

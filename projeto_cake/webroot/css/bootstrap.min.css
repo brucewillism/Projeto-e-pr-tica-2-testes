@@ -79,7 +79,7 @@ hr{
 }
 
 .cssinputo{
-    width: 15em;   
+    width: 25em;   
     border-radius:4px;
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
@@ -88,10 +88,12 @@ hr{
     -webkit-box-shadow: 1px 1px 2px #333333;
     background: white; 
     border:1px solid #000000;
-    
     height: 2em;
 }
+.cssinputo:hover{
+    background-color: #87CEFA; 
 
+}
 pre{
     overflow:auto
 }
@@ -897,7 +899,7 @@ img{
     border-radius:6px
 }
 .img-thumbnail{
-    display:inline-block;
+    display:inline-blocsk;
     max-width:100%;
     height:auto;
     padding:4px;

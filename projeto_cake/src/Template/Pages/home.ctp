@@ -5,7 +5,7 @@
         <div class="col-lg-6">
           <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
             <center>
-              <h1 class="h-ultra">INFOPOSTO</h1>
+              <h1 class="h-ultra">INFOSUS</h1>
             </center>  
           </div>
           <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
@@ -51,8 +51,8 @@
 
                  <form class="form-inline" action="#service" method="GET">
                   <input class="cssinputo" name="search" type="text" placeholder="Unidade de Saúde">
-                  <button class="sucs" type="submit"><i class="fa fa-search fa-2x"></i></button>
-                  <button>
+                  <button class="ola" type="submit"><i class="fa fa-search fa-2x"></i></button>
+                  <button class="o">
                     <?= $this->Html->link(__('Limpar pesquisa'),'/#service') ?>
                   </button>
                 </form>

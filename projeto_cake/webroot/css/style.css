@@ -8,7 +8,25 @@
 /* ==== Google font ==== */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,700,800|Roboto:400,500,700,900');
 /* --- pe-icon-7-stroke --- */
-.sucs {
+.o{
+-webkit-border-radius: 60;
+  -moz-border-radius: 60;
+  border-radius: 60px;
+  font-family: Arial;
+  color: #184794;
+  font-size: 11px;
+  background: #ffffff;
+  padding: 5px 10px 5px 10px;
+  border: solid #2683bd 2px;
+  text-decoration: none;
+}
+
+.o:hover {
+  background: #eaeff2;
+  text-decoration: none;
+}
+
+.ola {
    background: #3BE5FF;
    background-image: -webkit-linear-gradient(top, #3BE5FF, #3BE5FF);
    background-image: -moz-linear-gradient(top, #3BE5FF, #3BE5FF);
@@ -204,7 +222,7 @@ h1.font-light,h2.font-light,h3.font-light,h4.font-light,h5.font-light,h6.font-li
 
 p {
     margin: 0 0 20px;
-
+   font-family: arial;
 }
 
 p.medium {
@@ -2178,6 +2196,8 @@ font-size: 1.5em;
     font-size:1.2em;
     text-align: left;
     padding: 8px;
+    font-family:Arial;
+    font-weight: bold;
 }
 
 tr:nth-child(even){background-color: #f2f2f2}
