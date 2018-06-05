@@ -9,7 +9,43 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,700,800|Roboto:400,500,700,900');
 /* --- pe-icon-7-stroke --- */
 
+.inpt{   
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow: 1px 1px 2px #333333;    
+    -moz-box-shadow: 1px 1px 2px #333333;
+    -webkit-box-shadow: 1px 1px 2px #333333;
+    background: #99ccff; 
+    border:1px solid #000000;
+    width:20em;
+}
+ 
+textarea{
+    border: 1px solid #000000;
+    background:#99ccff;
+     width:20em;    height:4em;
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow: 1px 1px 2px #333333;    
+    -moz-box-shadow: 1px 1px 2px #333333;
+    -webkit-box-shadow: 1px 1px 2px #333333;
+    
+}
+ 
 
+.suba:hover, textarea:hover{ 
+         background: #ffffff; border:1px solid #990000;
+}
+ 
+.suba{
+    text-align: left;
+    background: #006699;
+    color: #ffffff;
+    width: 5em;
+    height: 2.5em;
+}
 body {
     width: 100%;
     height: 100%;
