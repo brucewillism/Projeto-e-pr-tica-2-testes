@@ -7,7 +7,7 @@
 <?= $this->Html->script("cadastro.js") ?>
 <?= $this->Html->script("cadastro-lat-lng.js") ?>
 <?= $this->fetch("script")?>
-
+<br><br><br><br><br>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
@@ -36,7 +36,8 @@
             <?= $this->Form->control('complete_address',["id"=>"complet","readonly"=>"readonly"]) ?>
             <?= $this->Form->control('latitude',["readonly"=>"readonly","class"=>"esconder","id"=>"latitude"]) ?>
             <?= $this->Form->control('longitude',["readonly"=>"readonly","class"=>"esconder","id"=>"longitude"]) ?>
-
+          
+business_hours
             <!-- <?= $this->Form->control('users._ids', ['options' => $users,'label'=>"administrador"]) ?> -->
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

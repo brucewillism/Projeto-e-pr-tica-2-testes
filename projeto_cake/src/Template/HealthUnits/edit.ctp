@@ -4,6 +4,8 @@
  * @var \App\Model\Entity\HealthUnit $healthUnit
  */
 ?>
+<center>
+<br><br><br><br>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
@@ -29,9 +31,11 @@
             echo $this->Form->control('complete_address');
             echo $this->Form->control('latitude');
             echo $this->Form->control('longitude');
+            echo $this->Form->control('business_hours');
             echo $this->Form->control('users._ids', ['options' => $users]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
 </div>
+</center>
