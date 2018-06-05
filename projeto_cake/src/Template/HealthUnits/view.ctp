@@ -264,10 +264,10 @@ $this->Html->script('https://maps.googleapis.com/maps/api/js?key=AIzaSyAVZRzZzK-
                 <center>
                   <form id="formulario" autocomplete="off">
                     <fieldset>
-                      <label>Nome:</label><br><input class="nome" type="text"><br>
-                      <label>Assunto:</label><br><input class="assunto" type="text"><br>
+                      <label>Nome:</label><br><input class="inpt" type="text"><br>
+                      <label>Assunto:</label><br><input class="inpt" type="text"><br>
                       <label>Mensagem:</label><br><textarea class="msg" cols="35" rows="8"></textarea><br>
-                      <input class="btn_submit" type="submit" value="Enviar">
+                      <input class="suba" type="submit" value="Enviar">
                     </fieldset>
                   </form>
                 </center>
