@@ -45,7 +45,7 @@
             <div class="row">
               <div class="col-lg-6 text-center">
                 <center>
-                  <h3 class="h-bold">Pesquise o que você procura (Serviços,Unidades,Município...)</h3>
+                  <h3 class="h-bold">Pesquise o que você procura (Serviços,Unidades,...)</h3>
                 </center>
                 <div class="container-fluid">
 
