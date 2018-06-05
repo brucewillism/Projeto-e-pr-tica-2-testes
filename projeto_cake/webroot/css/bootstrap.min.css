@@ -79,7 +79,7 @@ hr{
 }
 
 .cssinputo{
-    width: 75%;   
+    width: 55%;   
     border-radius:4px;
     -moz-border-radius:4px;
     -webkit-border-radius:4px;
@@ -91,7 +91,7 @@ hr{
     height: 2em;
 }
 .cssinputo:hover{
-    background-color: #87CEFA; 
+    background-color: #CEECF5;
 
 }
 pre{

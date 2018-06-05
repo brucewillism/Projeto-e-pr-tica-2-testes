@@ -23,6 +23,7 @@
                 <th scope="col"><?= $this->Paginator->sort('endereço') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('latitude') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('longitude') ?></th>
+                <th scope="col"><?= $this->Paginator->sort('Horário de Atendimento') ?></th>
                 <th scope="col" class="actions"><?= __('ações') ?></th>
             </tr>
         </thead>
@@ -35,6 +36,7 @@
                 <td><?= h($healthUnit->complete_address) ?></td>
                 <td><?= h($healthUnit->latitude) ?></td>
                 <td><?= h($healthUnit->longitude) ?></td>
+                <td><?= h($healthUnit->business_hours) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $healthUnit->id]) ?>
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $healthUnit->id]) ?>
