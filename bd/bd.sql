@@ -2,7 +2,7 @@
 --
 -- Host: localhost    Database: projeto
 -- ------------------------------------------------------
--- Server version	5.7.22-0ubuntu0.16.04.1
+-- Server version 5.7.22-0ubuntu0.16.04.1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -30,6 +30,7 @@ CREATE TABLE `health_units` (
   `complete_address` varchar(500) DEFAULT NULL,
   `latitude` varchar(100) DEFAULT NULL,
   `longitude` varchar(100) DEFAULT NULL,
+  `business_hours` varchar(30) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -40,7 +41,7 @@ CREATE TABLE `health_units` (
 
 LOCK TABLES `health_units` WRITE;
 /*!40000 ALTER TABLE `health_units` DISABLE KEYS */;
-INSERT INTO `health_units` VALUES (1,'Policlínica São Lucas','8135431722','53635-110','Rua Dr. Augusto Vaz de Oliveira, 65 - Cruz de Rebouças, Igarassu - PE, 53635-140, Brasil','-7.8721706','-34.9070126'),(2,'Unidade de Saúde da Família Bonfim I','(81)35454819','53637-550','Av. Rubina, 73 - Santa Luzia, Igarassu - PE, 53637-550, Brasil','-7.880873999999999','-34.907222'),(3,'Unidade de Saúde da Família- Posto do monta','0000-0000','53620-684','R. Luís Freire, 12A - Posto de Monta, Igarassu - PE, 53620-684, Brasil','-7.844273599999999','-34.9055821'),(4,'Unidade Hospital de Igarassu','3543-0566','53610-010','Rua Doutor Cosme de Sá Pereira, S/n - Centro, Igarassu - PE, 53610-010, Brasil','-7.831563099999999','-34.9118551'),(5,'Posto de Saúde de Cuieiras','0000-0000','53625-575 ','Estrada de Cuieiras - Encanto Igarassú, Igarassu - PE, Brasil','-7.854916999999999','-34.8918224'),(6,'Posto de Saúde da Família ','3438-2921','53610-610','Praça da Bandeira, 44A - Centro, Igarassu - PE, 53610-610, Brasil','-7.8132552','-34.9123055'),(7,'Unidade de Saúde da Familia Bonfim 1','3545-4819','53637-550','Av. Rubina, 73 - Santa Luzia, Igarassu - PE, 53637-550, Brasil','-7.880873999999999','-34.907222'),(8,'Unidade de Saúde da Família- Redenção','0000-0000','53620-383','Rua José Bartolomeu Galvão de Melo - Bibi, 44 - Saramandaia, Igarassu - PE, 53620-383, Brasil','-7.842111999999999','-34.909096'),(9,'Unidade de Saúde da Família- Sítio Lira','0000-0000','53625-034','Rua Alfredo Viêira de Melo, 209 - Cruz de Rebouças, Igarassu - PE, 53625-030, Brasil','-7.8702098','-34.9036716'),(10,'Unidade de Saúde da Família- Agamenon 1','3545-3320','53640-290','Rua Líbia, Igarassu - PE, Brasil','-7.8262519','-34.922006'),(11,'Unidade de Saúde do Boa Sorte','0000-0000',' 53625-330','R. Sítio do Souza, 70 - Jardim Boa Sorte, Igarassu - PE, 53625-330, Brasil','-7.863739499999999','-34.9046438'),(12,'Unidade de Saúde da Família Taépe','8135431772',' 53605-065','R. Rubéns Martins Berta, 36 - Campina de Feira, Igarassu - PE, 53605-065, Brasil','-7.826136900000001','-34.912887'),(13,'Unidade de Saúde da Família Inhamã','0000-0000','53620-249','Rua José Mário Dias - Sítio Inhamã, Cruz de Rebouças, Igarassu - PE, Brasil','-7.88460966','-34.89450701');
+INSERT INTO `health_units` VALUES (1,'Policlínica São Lucas','8135431722','53635-110','Rua Dr. Augusto Vaz de Oliveira, 65 - Cruz de Rebouças, Igarassu - PE, 53635-140, Brasil','-7.8721706','-34.9070126','XX:XX às XX:XX'),(2,'Unidade de Saúde da Família Bonfim I','(81)35454819','53637-550','Av. Rubina, 73 - Santa Luzia, Igarassu - PE, 53637-550, Brasil','-7.880873999999999','-34.907222'),(3,'Unidade de Saúde da Família- Posto do monta','0000-0000','53620-684','R. Luís Freire, 12A - Posto de Monta, Igarassu - PE, 53620-684, Brasil','-7.844273599999999','-34.9055821'),(4,'Unidade Hospital de Igarassu','3543-0566','53610-010','Rua Doutor Cosme de Sá Pereira, S/n - Centro, Igarassu - PE, 53610-010, Brasil','-7.831563099999999','-34.9118551'),(5,'Posto de Saúde de Cuieiras','0000-0000','53625-575 ','Estrada de Cuieiras - Encanto Igarassú, Igarassu - PE, Brasil','-7.854916999999999','-34.8918224'),(6,'Posto de Saúde da Família ','3438-2921','53610-610','Praça da Bandeira, 44A - Centro, Igarassu - PE, 53610-610, Brasil','-7.8132552','-34.9123055'),(7,'Unidade de Saúde da Familia Bonfim 1','3545-4819','53637-550','Av. Rubina, 73 - Santa Luzia, Igarassu - PE, 53637-550, Brasil','-7.880873999999999','-34.907222'),(8,'Unidade de Saúde da Família- Redenção','0000-0000','53620-383','Rua José Bartolomeu Galvão de Melo - Bibi, 44 - Saramandaia, Igarassu - PE, 53620-383, Brasil','-7.842111999999999','-34.909096'),(9,'Unidade de Saúde da Família- Sítio Lira','0000-0000','53625-034','Rua Alfredo Viêira de Melo, 209 - Cruz de Rebouças, Igarassu - PE, 53625-030, Brasil','-7.8702098','-34.9036716'),(10,'Unidade de Saúde da Família- Agamenon 1','3545-3320','53640-290','Rua Líbia, Igarassu - PE, Brasil','-7.8262519','-34.922006'),(11,'Unidade de Saúde do Boa Sorte','0000-0000',' 53625-330','R. Sítio do Souza, 70 - Jardim Boa Sorte, Igarassu - PE, 53625-330, Brasil','-7.863739499999999','-34.9046438'),(12,'Unidade de Saúde da Família Taépe','8135431772',' 53605-065','R. Rubéns Martins Berta, 36 - Campina de Feira, Igarassu - PE, 53605-065, Brasil','-7.826136900000001','-34.912887'),(13,'Unidade de Saúde da Família Inhamã','0000-0000','53620-249','Rua José Mário Dias - Sítio Inhamã, Cruz de Rebouças, Igarassu - PE, Brasil','-7.88460966','-34.89450701');
 /*!40000 ALTER TABLE `health_units` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -93,7 +94,7 @@ CREATE TABLE `specialties` (
 
 LOCK TABLES `specialties` WRITE;
 /*!40000 ALTER TABLE `specialties` DISABLE KEYS */;
-INSERT INTO `specialties` VALUES (2,'Pediatria'),(3,'Odontologia'),(4,'clinico geral');
+INSERT INTO `specialties` VALUES (2,'Pediatria'),(3,'Odontologia'),(4,'clinico geral'),(5,'Dentista'),(6,'Ginecologista');
 /*!40000 ALTER TABLE `specialties` ENABLE KEYS */;
 UNLOCK TABLES;
 
