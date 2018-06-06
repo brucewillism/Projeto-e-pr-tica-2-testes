@@ -92,7 +92,7 @@
           <!-- <img src="../css/img/team/2.jpg"> -->
           <!-- <?= $this->Html->image('team/2.jpg') ?> -->
           <center>
-            <p> Bruce Willis &nbsp;&nbsp;&nbsp; Jullyana Maria &nbsp;&nbsp;&nbsp; Maurício Lee &nbsp;&nbsp;&nbsp; Milena Lins &nbsp;&nbsp;&nbsp; Wandeson josé </p>
+            <p> Bruce Willis &nbsp;&nbsp;&nbsp; Jullyana Maria &nbsp;&nbsp;&nbsp; Milena Lins &nbsp;&nbsp;&nbsp; Thiago Vinicius &nbsp;&nbsp;&nbsp; Wandeson José </p>
 
           </center>
         </div>
