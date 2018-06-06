@@ -1,3 +1,4 @@
+
 <?php
 namespace App\Model\Table;
 
@@ -93,6 +94,11 @@ class HealthUnitsTable extends Table
             ->scalar('longitude')
             ->maxLength('longitude', 100)
             ->allowEmpty('longitude');
+        
+        $validator
+            ->scalar('business_hours')
+            ->maxLength('business_hours', 10)
+            ->allowEmpty('business_hours');
 
         return $validator;
     }
