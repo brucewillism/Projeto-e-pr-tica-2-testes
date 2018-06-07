@@ -19,3 +19,5 @@
   
   composer install
   (instalação do composer) 
+  
+  copiar o mod rwhiter para a pasta mods-enablead
