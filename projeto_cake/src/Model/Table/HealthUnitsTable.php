@@ -94,10 +94,10 @@ class HealthUnitsTable extends Table
             ->maxLength('longitude', 100)
             ->allowEmpty('longitude');
         
-        $validator
-            ->scalar('business_hours')
-            ->maxLength('business_hours', 10)
-            ->allowEmpty('business_hours');
+        // $validator
+        //     ->scalar('business_hours')
+        //     ->maxLength('business_hours', 10)
+        //     ->allowEmpty('business_hours');
 
         return $validator;
     }

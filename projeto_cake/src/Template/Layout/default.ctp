@@ -13,8 +13,8 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-$title = "INFOPOSTO";
-$cakeDescription = "INFOPOSTO";
+$title = "INFOSUS";
+$cakeDescription = "INFOSUS";
 $loguser = $this->request->getSession()->read("Auth.User");
 ?>
 <!DOCTYPE html>
