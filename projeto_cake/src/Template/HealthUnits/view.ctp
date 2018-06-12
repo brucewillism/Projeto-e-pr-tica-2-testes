@@ -12,7 +12,7 @@
     <h3><?= h($healthUnit->name) ?></h3>
   </center>
             <div>
-              <div class="w3-panel w3-card">
+              <div class="w3-panel w3-card" style="background-color: white">
               <center><h5 class="b">Informações da Unidade</h5></center>
               <b>
                 <h10>
@@ -40,7 +40,7 @@
     <div class="related direitadiv">
         <?php if (!empty($healthUnit->specialties)): ?>
             <div>
-              <div class="w3-panel w3-card">
+              <div class="w3-panel w3-card" style="background-color: white">
               <center><h5 >Especialidades</h5></center>
               <b><h10>
                    <?= __('Nome') ?></h10></b>
@@ -273,8 +273,3 @@ $this->Html->script('https://maps.googleapis.com/maps/api/js?key=AIzaSyAVZRzZzK-
                 </center>
               </div>
 </div>
-
-
-
-
- 
