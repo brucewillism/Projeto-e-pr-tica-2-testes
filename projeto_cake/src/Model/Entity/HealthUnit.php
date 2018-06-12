@@ -35,6 +35,7 @@ class HealthUnit extends Entity
         'complete_address' => true,
         'latitude' => true,
         'longitude' => true,
+        'business_hours' => true,
         'users' => true
     ];
 }
