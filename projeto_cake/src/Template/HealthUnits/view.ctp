@@ -12,8 +12,11 @@
     <h3><?= h($healthUnit->name) ?></h3>
   </center>
             <div>
-              <div class="w3-panel w3-card" style="background-color: white">
-              <center><h5 class="b">Informações da Unidade</h5></center>
+              <div class="w3-panel w3-card" style="background-color: white;width: 45%;float:left;padding: 0em">
+              <center>
+              <header class="w3-container w3-light-blue">
+              <b><h10 style="font-size: 1.2em;">Informações da Unidade</h10></b></center>
+              </header>
               <b>
                 <h10>
                   <?= __('Telefone') ?>
@@ -40,8 +43,10 @@
     <div class="related direitadiv">
         <?php if (!empty($healthUnit->specialties)): ?>
             <div>
-              <div class="w3-panel w3-card" style="background-color: white">
-              <center><h5 >Especialidades</h5></center>
+              <div class="w3-panel w3-card" style="background-color: white;width:45%;float:right;padding: 0em">
+               <header class="w3-container w3-light-blue">
+              <center><b><h10 style="font-size: 1.2em;">Especialidades</h10></b></center>
+              </header>
               <b><h10>
                    <?= __('Nome') ?></h10></b>
                 
@@ -52,6 +57,7 @@
                 <?php endforeach; ?>
         <?php endif; ?>
         </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
         <div class="container mapa">
             <h4>Localização</h4>
             <div id="map"></div>
