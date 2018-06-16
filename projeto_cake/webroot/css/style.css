@@ -8,6 +8,26 @@
 /* ==== Google font ==== */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,700,800|Roboto:400,500,700,900');
 /* --- pe-icon-7-stroke --- */
+.comentario{
+  border: 2px solid lightblue;
+  padding: 10px;
+}
+.author{
+  text-align: center;
+}
+
+
+.comentarios{
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  height: 500px;
+}
+.comentarios h4{
+  text-align: center;
+}
+
 .cssinputo{
     margin-top: 2px;
     width: 100%;   

@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Datasource\ConnectionManager;
 
 /**
  * HealthUnits Controller
@@ -34,12 +35,22 @@ class HealthUnitsController extends AppController
      */
     public function view($id = null)
     {
+        $comment = $this->loadModel('comments');
+        $comment = $this->comments->newEntity();
+        
         $healthUnit = $this->HealthUnits->get($id, [
             'contain' => ['Specialties']
         ]);
 
+        $comments = $this->comments->find("all",[
+            "conditions"=>[
+                "OR"=>["comments.health_unit_id"=>$id]
+            ]
+        ]);
 
         $this->set('healthUnit', $healthUnit);
+        $this->set('comment', $comment);
+        $this->set('comments', $comments);
     }
 
     /**
