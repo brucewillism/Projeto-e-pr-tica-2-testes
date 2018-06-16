@@ -15,16 +15,31 @@
             <div class="wow fadeInRight" data-wow-delay="0.1s">
 
               <ul class="lead-list">
-                <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Centralização de informações</strong><br /></span></li>
-                <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>Usabilidade</strong><br /></span></li>
-                <li><span class="fa fa-check fa-2x icon-success"></span> <span class="list"><strong>XXX</strong><br /></span></li>
+                <li>
+                  <span class="fa fa-check fa-2x icon-success"></span> 
+                  <span class="list">
+                    <strong>Centralização de informações</strong><br/>
+                  </span>
+                </li>
+                <li>
+                  <span class="fa fa-check fa-2x icon-success"></span> 
+                  <span class="list">
+                    <strong>Simplicidade</strong><br />
+                  </span>
+                </li>
+                <li>
+                  <span class="fa fa-check fa-2x icon-success"></span>
+                   <span class="list">
+                    <strong>Usabilidade</strong><br/>
+                  </span>
+                </li>
               </ul>
             </div>
           </div> 
           <center>
             <h3>Confira!</h3>
-            <a href="#service"c lass="btn btn-circle js-scroll-trigger">
-              <i  class="fa fa-angle-double-down animated"></i>
+            <a href="#service" class="btn-circle js-scroll-trigger" tabindex="-1">
+              <i class="fa fa-angle-double-down animated" tabindex="-1"></i>
             </a>
           </center>
         </div>
@@ -43,19 +58,29 @@
         <section id="service" class="home-section paddingtop-80">
           <div class="container">
             <div class="row">
-              <div class="col-lg-6 text-center">
+              <div class="col-md-12 text-center">
                 <center>
-                  <h3 class="h-bold">Pesquise o que você procura (Serviços,Unidades,...)</h3>
+                  <h3 class="h-bold row">Pesquise o que você procura (Serviços,Unidades,...)</h3>
                 </center>
                 <div class="container-fluid">
 
-                 <form class="form-inline" action="#service" method="GET">
-                  <input class="cssinputo" name="search" type="text" placeholder="Unidade de Saúde">
-                  <button class="ola" type="submit"><i class="fa fa-search fa-2x"></i></button>
-                  <button class="o">
-                    <?= $this->Html->link(__('Limpar pesquisa'),'/#service') ?>
-                  </button>
+                <div class="row">
+                  <form class="form-inline" action="#service" method="GET">
+                    <div class="col-md-8 col-md-offset-1">
+                      <input class="cssinputo" name="search" type="text" placeholder="Unidade de Saúde">
+                    </div>
+                    <div class="col-md-3 botoes-pesquisa">
+                        <button class="ola" type="submit"><i class="fa fa-search fa-2x"></i></button>
+                        <?=  
+                          $this->Html->link(
+                          $this->Form->button("Limpar Pesquisa",["class"=>"o","tabindex"=>-1]),
+                          "/#service",
+                          ['escape' => false]
+                          )
+                      ?>
+                    </div>
                 </form>
+                </div>
               </div>
               <br>
               <div class="jumbotron resultado">

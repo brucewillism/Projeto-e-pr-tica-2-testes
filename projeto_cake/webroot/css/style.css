@@ -8,21 +8,51 @@
 /* ==== Google font ==== */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,700,800|Roboto:400,500,700,900');
 /* --- pe-icon-7-stroke --- */
+.cssinputo{
+    margin-top: 2px;
+    width: 100%;   
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow: 1px 1px 2px #333333;    
+    -moz-box-shadow: 1px 1px 2px #333333;
+    -webkit-box-shadow: 1px 1px 2px #333333;
+    background: white; 
+    border:1px solid #000000;
+    height: 2.5em;
+}
+.cssinputo:hover{
+    background-color: #CEECF5;
+}
+.botoes-pesquisa{
+  margin-left: -6%;
+}
+
 .o{
 -webkit-border-radius: 60;
   -moz-border-radius: 60;
   border-radius: 60px;
   font-family: Arial;
-  color: #184794;
-  font-size: 11px;
+  /*color: #184794;*/
+  font-size: 12px;
   background: #ffffff;
   padding: 5px 10px 5px 10px;
   border: solid #2683bd 2px;
   text-decoration: none;
 }
-
+*:focus{
+  border: 1px solid #C6BDBD;
+  border-radius: 3px;
+}
 .o:hover {
   background: #eaeff2;
+  text-decoration: none;
+  transform: scale(1.1);
+}
+.ola:hover{
+  transform: scale(1.1);
+}
+button.o{
   text-decoration: none;
 }
 .navbar-brand{
@@ -89,7 +119,7 @@
     width:20em;
 }
 .cssinput:hover, .csstextarea:hover{ 
-         background: #ffffff; border:1px solid #990000;
+    background: #ffffff; border:1px solid #990000;
 }
 
 .csstextarea{
