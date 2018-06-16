@@ -85,7 +85,7 @@ $loguser = $this->request->getSession()->read("Auth.User");
           </button>
 
           <?= $this->Html->link(
-            $this->Html->image('logo.jpeg',['width'=>150,'heigth'=>40]
+            $this->Html->image('logo.png',["class"=>"logo"]
           ), '/', array('escape' => false,'class'=>'navbar-brand')
           );
           ?>
