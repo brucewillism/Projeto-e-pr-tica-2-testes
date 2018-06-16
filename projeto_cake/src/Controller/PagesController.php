@@ -60,11 +60,6 @@ class PagesController extends AppController
 
             $unidades = $stmt->fetchAll('assoc');
 
-
-
-
-
-
             // $unidades = $unidade->find('all',
             //     [
             //         'conditions'=>

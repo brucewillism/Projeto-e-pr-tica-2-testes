@@ -126,7 +126,4 @@ class HealthUnitsController extends AppController
     // {
     //     return $this->exists(['id' => $healthUnit, 'user_id' => $userId]);
     // }
-
-
-
 }
