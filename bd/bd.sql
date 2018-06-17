@@ -16,6 +16,34 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `comments`
+--
+
+DROP TABLE IF EXISTS `comments`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `comments` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `content` varchar(500) NOT NULL,
+  `health_unit_id` int(10) unsigned NOT NULL,
+  `data` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `author` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `health_unit_id` (`health_unit_id`),
+  CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`health_unit_id`) REFERENCES `health_units` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `comments`
+--
+
+LOCK TABLES `comments` WRITE;
+/*!40000 ALTER TABLE `comments` DISABLE KEYS */;
+/*!40000 ALTER TABLE `comments` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `health_units`
 --
 
@@ -163,4 +191,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-06-16  7:36:09
+-- Dump completed on 2018-06-17  7:53:23
