@@ -1,0 +1,49 @@
+.comentarios{
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: white;
+	height: 500px;
+	overflow-y: auto;
+}
+
+.says{
+	font-style: italic;
+	font-weight: bold;
+}
+div.comment-author.vcard{
+	margin: auto;
+	font-size: 20px;
+	
+}
+div.comment-author.vcard img{
+	margin: auto;
+	height: 2em;
+	width: 2.5em;
+}
+.comment-content{
+	border: 1px solid lightblue;
+	background-color: white;
+	padding: 5px;
+	margin: auto;
+	margin-top: 15px;
+	height: 40px;
+	font-weight: bold;
+}
+.comment-body{
+	background-color: #EFE; 
+	border: 1px solid black;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+.comment-meta{
+	margin: auto;
+	margin-bottom: 7px;
+}
+
+div.comment-meta p{
+	margin: auto;
+}
+.p-comment-data{
+	float: right;
+}

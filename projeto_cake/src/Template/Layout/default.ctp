@@ -48,6 +48,7 @@ $loguser = $this->request->getSession()->read("Auth.User");
   <?= $this->Html->css('owl.theme.css') ?>
   <?= $this->Html->css('animate.css') ?>
   <?= $this->Html->css('style.css') ?>
+  <?= $this->Html->css('comentarios.css') ?>
 
   <!-- boxed bg -->
   <?= $this->Html->css('bodybg/bg1.css') ?>
