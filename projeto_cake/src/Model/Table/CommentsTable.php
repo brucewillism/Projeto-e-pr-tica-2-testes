@@ -62,7 +62,7 @@ class CommentsTable extends Table
 
         $validator
             ->dateTime('data')
-            ->requirePresence('data', 'create')
+            // ->requirePresence('data', 'create')
             ->notEmpty('data');
 
         $validator
