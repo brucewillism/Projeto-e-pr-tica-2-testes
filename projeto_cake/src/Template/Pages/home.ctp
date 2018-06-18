@@ -83,8 +83,9 @@
                 </div>
               </div>
               <br>
+          <!--  erro na função sizeof trocando pro array, (sizeof ($unidades))   -->
               <div class="jumbotron resultado">
-                <?php if (sizeof($unidades) > 0): ?>
+                <?php if (array($unidades) > 0): ?>
                  <?php foreach ($unidades as $unidade): ?>
                   <li id="list">
                    <?= $this->Html->link($unidade['name'],
