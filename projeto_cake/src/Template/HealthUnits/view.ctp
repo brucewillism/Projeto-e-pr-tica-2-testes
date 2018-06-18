@@ -4,11 +4,58 @@
  * @var \App\Model\Entity\HealthUnit $healthUnit
  */
 ?>
+
 <?= $this->Html->css('localizacao_unidade.css') ?>
 <?= $this->fetch('css') ?>
 
+
+
 <div class="healthUnits view large-12 medium-8 columns content">
   <center>
+    <section id="service" class="home-section paddingtop-80">
+      <div class="container">
+        <div class="row">
+          <center>
+             </center>
+                 <div class="container-fluid">
+                 <div class="row">
+                   <form class="form-inline" action="/#intro/#service" method="GET">
+                     <div class="col-md-8 col-md-offset-1"> 
+                       <input class="cssinputo" name="search" type="text" placeholder="  Unidade de Saúde">
+                     </div>
+                     <div class="col-md-3 botoes-pesquisa">
+                         <button class="ola" type="submit"><i class="fa fa-search fa-2x"></i></button>
+                          <?=  
+                          $this->Html->link(
+                          $this->Form->button("Limpar Pesquisa",["class"=>"o","tabindex"=>-1]),
+                          "/#service",
+                          ['escape' => false]
+                          )
+                      ?>
+                    </div>
+                </form>
+                </div>
+              </div>
+              <br>
+<!--               <div class="jumbotron">
+ -->              <!--   <?php if (serialize($unidades) > 0): ?>
+                 <?php foreach ($unidades as $unidade): ?>
+                  <li id="list">
+                   <?= $this->Html->link($unidade['name'],
+                   ["controller"=>"HealthUnits","action"=>"view",$unidade['id']]) ?>
+                 </li>
+               <?php endforeach ?>
+               <?php else: ?>
+                <div class="alert alert-info" role="alert">
+                   Nenhuma unidade encontrada pela busca
+                 </div>
+               <?php endif ?> -->
+             </div>
+           </div>
+         </div>
+       </div>
+     </section>
+
     <h3><?= h($healthUnit->name) ?></h3>
   </center>
   <div class="cards container">
@@ -21,6 +68,7 @@
             </h10>
           </b>
         </header>
+
       </center>
       <div class="conteudo">
         <b>Telefone</b>

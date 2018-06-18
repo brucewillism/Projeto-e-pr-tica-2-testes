@@ -97,7 +97,7 @@ $loguser = $this->request->getSession()->read("Auth.User");
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
           <ul class="nav navbar-nav">
-            <li class="active">
+            <li>
               <?= $this->Html->link("Início","/#intro") ?>
             </li>
             <li>
