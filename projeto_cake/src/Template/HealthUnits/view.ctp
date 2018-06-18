@@ -19,7 +19,7 @@
              </center>
                  <div class="container-fluid">
                  <div class="row">
-                   <form class="form-inline" action="/#intro/#service" method="GET">
+                   <form class="form-inline" action="../../#intro#services" method="GET">
                      <div class="col-md-8 col-md-offset-1"> 
                        <input class="cssinputo" name="search" type="text" placeholder="  Unidade de Saúde">
                      </div>
