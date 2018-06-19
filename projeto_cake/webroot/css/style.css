@@ -29,27 +29,7 @@
   margin-left: -6%;
 }
 
-.o{
--webkit-border-radius: 60;
-  -moz-border-radius: 60;
-  border-radius: 60px;
-  font-family: Arial;
-  /*color: #184794;*/
-  font-size: 12px;
-  background: #ffffff;
-  padding: 5px 10px 5px 10px;
-  border: solid #2683bd 2px;
-  text-decoration: none;
-}
-*:focus{
-  border: 1px solid #C6BDBD;
-  border-radius: 3px;
-}
-.o:hover {
-  background: #eaeff2;
-  text-decoration: none;
-  transform: scale(1.1);
-}
+
 .ola:hover{
   transform: scale(1.1);
 }
@@ -74,30 +54,24 @@ button.o{
   padding: 10px !important;
 }
 
-.ola {
-   background: #3BE5FF;
-   background-image: -webkit-linear-gradient(top, #3BE5FF, #3BE5FF);
-   background-image: -moz-linear-gradient(top, #3BE5FF, #3BE5FF);
-   background-image: -ms-linear-gradient(top, #3BE5FF, #3BE5FF);
-   background-image: -o-linear-gradient(top, #3BE5FF, #3BE5FF);
-   background-image: linear-gradient(to bottom, #3BE5FF, #3BE5FF);
-   -webkit-border-radius: 20px;
-   -moz-border-radius: 20px;
-   border-radius: 20px;
-   color: #FFFFFF;
-   font-family: Open Sans;
-   font-size: 11px;
-   font-weight: 100;
-   padding: 28px;
-   box-shadow: 1px 1px 20px 0px #000000;
-   -webkit-box-shadow: 1px 1px 20px 0px #000000;
-   -moz-box-shadow: 1px 1px 20px 0px #000000;
-   text-shadow: 1px 1px 20px #000000;
-   border: solid #000000 1px;
-   text-decoration: none;
-   display: inline-block;
-   cursor: pointer;
+ .o {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0px;
+  font-family: Arial;
+  color: #0d0c0d;
+  font-size: 13px;
+  background: #fafafa;
+  padding: 8px 5px 9px 8px;
+  border: solid #749bde 2px;
+  text-decoration: none;
 }
+
+ .o:hover {
+  background: #e4e8eb;
+  text-decoration: none;
+}
+
 
 .sucs:hover {
    background: #1BBED0;
@@ -768,7 +742,6 @@ hr.bold {
 .paddingtop-50{padding-top:50px !important;}
 .paddingtop-60{padding-top:60px !important;}
 .paddingtop-70{padding-top:70px !important;}
-.paddingtop-80{padding-top:80px !important;}
 .paddingtop-90{padding-top:90px !important;}
 .paddingtop-100{padding-top:100px !important;}
 
@@ -791,10 +764,10 @@ hr.bold {
 
 .home-section {
     padding-top: 150px;
-	display:block;
+	  display:block;
     position:relative;
     z-index:120;
-	background-color: #fff;
+	 background-color: #fff;
 }
 
 
