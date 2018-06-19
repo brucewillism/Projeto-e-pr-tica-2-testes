@@ -122,7 +122,7 @@ CREATE TABLE `specialties` (
 
 LOCK TABLES `specialties` WRITE;
 /*!40000 ALTER TABLE `specialties` DISABLE KEYS */;
-INSERT INTO `specialties` VALUES (2,'Pediatria'),(3,'Odontologia'),(4,'clinico geral');
+INSERT INTO `specialties` VALUES (2,'Pediatria'),(3,'Odontologia'),(4,'Clinico geral');
 /*!40000 ALTER TABLE `specialties` ENABLE KEYS */;
 UNLOCK TABLES;
 
