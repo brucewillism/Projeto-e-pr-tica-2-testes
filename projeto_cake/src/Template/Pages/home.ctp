@@ -67,11 +67,16 @@
                 <div class="row">
                   <form class="form-inline" action="#service" method="GET">
                     <div class="col-md-8 col-md-offset-1">
+                    <?php if (isset($_GET['search'])): ?>
+                      <input class="cssinputo" name="search" type="text" value="<?php echo $_GET['search'];?>" placeholder="Unidade de Saúde">
+                    <?php else: ?>
                       <input class="cssinputo" name="search" type="text" placeholder="Unidade de Saúde">
+                    <?php endif ?>
+                  
                     </div>
                     <div class="col-md-3 botoes-pesquisa">
                         <button class="ola" type="submit"><i class="fa fa-search fa-2x"></i></button>
-                        <?=  
+                        <?= 
                           $this->Html->link(
                           $this->Form->button("Limpar Pesquisa",["class"=>"o","tabindex"=>-1]),
                           "/#service",
@@ -83,6 +88,7 @@
                 </div>
               </div>
               <br>
+
           <!--  erro na função sizeof trocando pro array, (sizeof ($unidades))   -->
               <div class="jumbotron resultado">
                 <?php if (array($unidades) > 0): ?>
@@ -92,6 +98,7 @@
                    ["controller"=>"HealthUnits","action"=>"view",$unidade['id']]) ?>
                  </li>
                <?php endforeach ?>
+
                <?php else: ?>
                 <div class="alert alert-info" role="alert">
                    Nenhuma unidade encontrada pela busca
