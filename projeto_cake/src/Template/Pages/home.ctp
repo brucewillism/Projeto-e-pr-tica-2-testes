@@ -60,26 +60,23 @@
             <div class="row">
               <div class="col-md-12 text-center">
                 <center>
-                  <h3 class="h-bold row">Pesquise o que você procura (Serviços,Unidades,...)</h3>
+                  <h3 class="h-bold row">Pesquise o que você procura(Unidades de Saúde,Serviços oferecidos etc)</h3>
                 </center>
                 <div class="container-fluid">
 
                 <div class="row">
                   <form class="form-inline" action="#service" method="GET">
                     <div class="col-md-8 col-md-offset-1">
-<<<<<<< HEAD
-                      <input class="cssinputo" name="search" type="text" placeholder="Buscar informações">
-=======
+
                     <?php if (isset($_GET['search'])): ?>
                       <input class="cssinputo" name="search" type="text" value="<?php echo $_GET['search'];?>" placeholder="Unidade de Saúde">
                     <?php else: ?>
-                      <input class="cssinputo" name="search" type="text" placeholder="Unidade de Saúde">
+                      <input class="cssinputo" name="search" type="text" placeholder="Clique aqui para buscar informações">
                     <?php endif ?>
                   
->>>>>>> 0569115ea2cf5467d28b2705892ebc8e33ac0ce8
                     </div>
                     <div class="col-md-3 botoes-pesquisa">
-                        <button class="ola" type="submit"><i class="fa fa-search fa-2x"></i></button>
+                        <button class="o" type="submit"><i class="fa fa-search fa-2x"></i></button>
                         <?= 
                           $this->Html->link(
                           $this->Form->button("Limpar Pesquisa",["class"=>"o","tabindex"=>-1]),

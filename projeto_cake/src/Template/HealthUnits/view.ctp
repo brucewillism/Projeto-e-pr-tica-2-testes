@@ -19,12 +19,12 @@
              </center>
                  <div class="container-fluid">
                  <div class="row">
-                   <form class="form-inline" action="../../#intro#services" method="GET">
+                   <form class="form-inline" action="../../#service" method="GET">
                      <div class="col-md-8 col-md-offset-1"> 
-                       <input class="cssinputo" name="search" type="text" placeholder="  Unidade de Saúde">
+                       <input class="cssinputo" name="search" type="text" placeholder="Clique aqui para buscar Informações">
                      </div>
                      <div class="col-md-3 botoes-pesquisa">
-                         <button class="ola" type="submit"><i class="fa fa-search fa-2x"></i></button>
+                         <button class="o" type="submit"><i class="fa fa-search fa-2x"></i></button>
                           <?=  
                           $this->Html->link(
                           $this->Form->button("Limpar Pesquisa",["class"=>"o","tabindex"=>-1]),
@@ -82,7 +82,7 @@
 
         <b>Horário de Atendimento</b>
         <p><?= h($healthUnit->business_hours)?></p>
-        <button type="button" onclick="Mudarestado('minhaDiv')">Ver mapa</button>
+        <button type="button" onclick="Mudarestado('minhaDiv')">Ocultar mapa</button>
       </div>
     </div>
     <div class="related direitadiv">
@@ -131,6 +131,7 @@
   <div id="map"></div>
 </div>
 </div>
+<br><br>
 <center><h4>Comentários</h4></center>
 
 <div class="container comentarios">
@@ -162,6 +163,7 @@
   <div class="wow fadeInDown col-md-6 col-md-offset-3" data-wow-delay="0.1s">
     <div class="widget">
       <p></p>
+      <br><br><br>
       <center>
         <h3 id="contato" class="h-bold text-center">Deixe seu comentário!</h3>
       </center>
@@ -176,7 +178,7 @@
           <?= $this->Form->control(
             'health_unit_id',['type'=>"hidden","default"=>$healthUnit->id]);?>
             <br>
-            <?= $this->Form->button(__('Enviar'),["class"=>"btn btn-primary form-control"]) ?>
+            <?= $this->Form->button(__('Enviar'),["class"=>"btn btn-primary pa"])?>
             <?= $this->Form->end() ?>
           </fieldset>
         </form>
@@ -379,4 +381,4 @@
   $this->Html->script('https://maps.googleapis.com/maps/api/js?key=AIzaSyAVZRzZzK-9O1rJqZs8lsenYQep7nc2LtQ&callback=myMap')
 // $this->Html->script("https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyAVZRzZzK-9O1rJqZs8lsenYQep7nc2LtQ&center=-33.9,151.14999999999998&zoom=12&format=png&maptype=roadmap&style=element:geometry%7Ccolor:0xf5f5f5&style=element:labels.icon%7Cvisibility:off&style=element:labels.text.fill%7Ccolor:0x616161&style=element:labels.text.stroke%7Ccolor:0xf5f5f5&style=feature:administrative.land_parcel%7Celement:labels.text.fill%7Ccolor:0xbdbdbd&style=feature:poi%7Celement:geometry%7Ccolor:0xeeeeee&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:poi.park%7Celement:geometry%7Ccolor:0xe5e5e5&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:road%7Celement:geometry%7Ccolor:0xffffff&style=feature:road.arterial%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:road.highway%7Celement:geometry%7Ccolor:0xdadada&style=feature:road.highway%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:transit.line%7Celement:geometry%7Ccolor:0xe5e5e5&style=feature:transit.station%7Celement:geometry%7Ccolor:0xeeeeee&style=feature:water%7Celement:geometry%7Ccolor:0xc9c9c9&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&size=480x360 ");
 ?>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>><br><br><br><br><br>

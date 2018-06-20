@@ -8,7 +8,9 @@
 /* ==== Google font ==== */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,700,800|Roboto:400,500,700,900');
 /* --- pe-icon-7-stroke --- */
-
+.pa{
+  width: 25%;
+}
 .cssinputo{
     margin-top: 2px;
     width: 100%;   
@@ -56,20 +58,21 @@ button.o{
 
  .o {
   -webkit-border-radius: 0;
-  -moz-border-radius: 0;
   border-radius: 0px;
-  font-family: Arial;
-  color: #0d0c0d;
-  font-size: 13px;
-  background: #fafafa;
-  padding: 8px 5px 9px 8px;
-  border: solid #749bde 2px;
-  text-decoration: none;
+    font-family: Arial;
+    color: #0d0c0d;
+    font-size: 13px;
+    background: #fafafa;
+    padding: 4px 8px;
+    border: solid #749bde 2px;
 }
 
  .o:hover {
   background: #e4e8eb;
   text-decoration: none;
+  -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
 }
 
 
