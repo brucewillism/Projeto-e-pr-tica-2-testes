@@ -82,7 +82,7 @@
 
         <b>Horário de Atendimento</b>
         <p><?= h($healthUnit->business_hours)?></p>
-        <button type="button" onclick="Mudarestado('minhaDiv')">Ocultar mapa</button>
+        <button type="button" onclick="Mudarestado('minhaDiv')">Ver mapa</button>
       </div>
     </div>
     <div class="related direitadiv">
@@ -115,16 +115,20 @@
   </div>
 </div>
 
- <script type="text/javascript">
-        function Mudarestado(el) {
-            var display = document.getElementById(el).style.display;
-            if(display == "none")
-                document.getElementById(el).style.display = 'block';
-            else
-                document.getElementById(el).style.display = 'none';
-        }
-  </script>
-<div id="minhaDiv">
+
+<script>
+    function Mudarestado(el) {
+        var display = document.getElementById(el).style.display;
+        if(display == "none"){
+        document.getElementById(el).style.display = 'block';
+    }
+     else{
+        document.getElementById(el).style.display = 'none';
+     }   
+    }
+</script>
+
+<div  class="hidden" style="display:none" id="minhaDiv">
 <div class="container mapa">
 </div>
   <h4>Localização</h4>
