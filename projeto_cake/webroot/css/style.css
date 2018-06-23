@@ -30,7 +30,10 @@
 .botoes-pesquisa{
   margin-left: -6%;
 }
-
+*:focus{
+  border: 1px solid #C6BDBD;
+  border-radius: 3px;
+}
 
 .ola:hover{
   transform: scale(1.1);
