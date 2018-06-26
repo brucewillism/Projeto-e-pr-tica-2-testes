@@ -74,6 +74,7 @@
         <center>
           <h3 class="font">
             Especialidades
+
           </h3>
         </center>
         <?php if (!empty($healthUnit->specialties)): ?>
@@ -87,9 +88,9 @@
          </div>
         <?php endif; ?>
       </div>
-    </div>
 </div>
-
+</div>
+</div>
 <div class="container mapa">
   <h4>Localização</h4>
   <div id="map"></div>
