@@ -87,11 +87,11 @@
       <?php if (!empty($healthUnit->specialties)): ?>
 
        <?php foreach ($healthUnit->specialties as $specialties): ?>
-         <h3><?= h($specialties->name) ?></h3><br>
+         <center><p style="font-size: 1.5em;margin-top:1.5em "><?= h($specialties->name) ?></center>
        <?php endforeach; ?>
 
        <?php else: ?>
-        <p></p>
+        
         <div class="alert alert-info">
           <b>Informação não encontrada</b>
         </div>
