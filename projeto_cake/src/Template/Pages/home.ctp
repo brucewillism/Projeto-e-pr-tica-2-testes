@@ -1,8 +1,8 @@
 <section id="intro" class="intro">
   <div class="intro-content">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
+      <div class="container">
+        <div class="col-lg-12">
           <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
             <center>
               <h1 class="h-ultra">INFOSUS</h1>
@@ -64,22 +64,22 @@
                 </center>
                 <div class="container-fluid">
 
-                <div class="row">
+                <div class="form-group">
                   <form class="form-inline" action="#service" method="GET">
                     <div class="col-md-8 col-md-offset-1">
 
                     <?php if (isset($_GET['search'])): ?>
                       <input class="cssinputo" name="search" type="text" value="<?php echo $_GET['search'];?>" placeholder="Unidade de Saúde">
                     <?php else: ?>
-                      <input class="cssinputo" name="search" type="text" placeholder="Clique aqui para buscar informações">
+                      <input class="form-control"" name="search" type="text" placeholder="Clique aqui para buscar informações">
                     <?php endif ?>
                   
                     </div>
-                    <div class="col-md-3 botoes-pesquisa">
-                        <button class="o" type="submit"><i class="fa fa-search fa-2x"></i></button>
+                    <div class="col-md-3">
+                        <button class="o" type="submit" style="border-radius: 15%;"><i class="fa fa-search fa-2x"></i></button>
                         <?= 
                           $this->Html->link(
-                          $this->Form->button("Limpar Pesquisa",["class"=>"o","tabindex"=>-1]),
+                          $this->Form->button("Limpar Pesquisa",["class"=>"o", "style"=> "border-radius: 9%","tabindex"=>-1]),
                           "/#service",
                           ['escape' => false]
                           )
@@ -91,8 +91,8 @@
               <br>
 
           <!--  erro na função sizeof trocando pro array, (sizeof ($unidades))   -->
-              <div class="jumbotron resultado">
-                <?php if (sizeof($unidades) > 0): ?>
+              <div class="jumbotron">
+                <?php if (array($unidades) > 0): ?>
                  <?php foreach ($unidades as $unidade): ?>
                   <li id="list">
                    <?= $this->Html->link($unidade['name'],
@@ -115,8 +115,8 @@
 
    <section id="equipe" class="home-section bg-gray paddingbot-60">
     <div class="container marginbot-50">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
+      <div class="container">
+        <div class="col-lg-12 col-lg-offset-2">
           <div class="wow fadeInDown" data-wow-delay="0.1s">
             <div class="section-heading text-center">
               <h2 class="h-bold">Equipe</h2>
@@ -126,7 +126,7 @@
           <!-- <img src="../css/img/team/2.jpg"> -->
           <!-- <?= $this->Html->image('team/2.jpg') ?> -->
           <center>
-            <p> Bruce Willis &nbsp;&nbsp;&nbsp; Jullyana Maria &nbsp;&nbsp;&nbsp; Milena Lins &nbsp;&nbsp;&nbsp; Thiago Vinicius &nbsp;&nbsp;&nbsp; Wandeson José </p>
+            <p> Bruce Willis &nbsp;&nbsp;&nbsp; Juliana Maria &nbsp;&nbsp;&nbsp; Milena Lins &nbsp;&nbsp;&nbsp; Thiago Vinicius &nbsp;&nbsp;&nbsp; Wandeson José </p>
 
           </center>
         </div>

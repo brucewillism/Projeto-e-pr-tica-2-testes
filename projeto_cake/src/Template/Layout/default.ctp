@@ -23,17 +23,14 @@ $loguser = $this->request->getSession()->read("Auth.User");
   <?= $this->Html->charset() ?>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <!-- Core JavaScript Files -->
-  <?= $this->Html->script("jquery/jquery-3.2.1.min.js") ?> 
+  <?= $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js') ?> 
+  <?= $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js') ?>
   <?= $this->Html->script('jquery/jquery.easing.min.js') ?>
   <?= $this->Html->script('jquery/jquery.scrollTo.js') ?>
   <?= $this->Html->script('jquery/jquery.appear.js') ?>
   <?= $this->Html->script('jquery/jquery.cubeportfolio.min.js') ?>
-  <?= $this->Html->script('bootstrap.min.js') ?>
-  <?= $this->Html->script('wow.min.js') ?>
+  <?= $this->Html->script('https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js') ?>
   <?= $this->Html->script('wow.min.js') ?>
   <?= $this->Html->script('stellar.js') ?>
   <?= $this->Html->script('owl.carousel.min.js') ?>
@@ -41,7 +38,7 @@ $loguser = $this->request->getSession()->read("Auth.User");
   <?= $this->Html->script('custom.js') ?>
 
   <!-- css -->
-  <?= $this->Html->css('bootstrap.min.css') ?>
+  <?= $this->Html->css('https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css')?>
   <?= $this->Html->css('font-awesome/css/font-awesome.min.css') ?>
   <?= $this->Html->css('plugins/cubeportfolio/css/cubeportfolio.min.css') ?>
   <?= $this->Html->css('nivo-lightbox.css') ?>
@@ -50,6 +47,7 @@ $loguser = $this->request->getSession()->read("Auth.User");
   <?= $this->Html->css('owl.theme.css') ?>
   <?= $this->Html->css('animate.css') ?>
   <?= $this->Html->css('style.css') ?>
+  <?= $this->Html->css('style2.css') ?>
   <?= $this->Html->css('comentarios.css') ?>
 
   <!-- boxed bg -->
@@ -69,61 +67,47 @@ $loguser = $this->request->getSession()->read("Auth.User");
   <?= $this->fetch('script') ?>
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-custom">
+<body id="page-top" data-spy="scroll">
 
-  <div id="wrapper">
+    <div style="background-color: turquoise; color: turquoise;">
+      ahasa
+    </div>
 
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-      <div class="top-area">
-        <div class="container">
-          <div class="row">
-          </div>
-        </div>
-      </div>
-      <div class="container navigation">
-
-        <div class="navbar-header page-scroll">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-            <i class="fa fa-bars"></i>
-          </button>
+    <nav class="navbar navbar-expand-md bg-light navbar-dark sticky-top">
 
           <?= $this->Html->link(
             $this->Html->image('logo.png',["class"=>"logo"]
           ), '/', array('escape' => false,'class'=>'navbar-brand')
           );
           ?>
-
-
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-          <ul class="nav navbar-nav">
-            <li>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
               <?= $this->Html->link("Início","/#intro") ?>
             </li>
+
             <li>
-              <?= $this->Html->link("Pesquisa","/#service") ?>
+              <?= $this->Html->link("Pesquisa ","/#service") ?>
             </li>
+
             <li>
-              <?= $this->Html->Link("Quem somos","/#equipe") ?>
+              <?= $this->Html->Link("Quem somos ","/#equipe") ?>
             </li>
+
             <li>
-              <?= $this->Html->link("Contato","/#contato") ?>
+              <?= $this->Html->link("Ajuda ","/#")?>
             </li>
-            <li>
-              <?= $this->Html->link("Ajuda","/#") ?>
-            </li>
+
             <?php if ($loguser): ?>
               <li><?= $this->Html->Link('Bem vindo '.explode(" ",$loguser['name'])[0],['controller'=>'users','action'=>'view',$loguser["id"]]) ?> </li>
               <li><?= $this->Html->link('Sair',['controller' => 'Users', 'action' => 'logout']) ?></li>
             <?php endif ?>
           </ul>
         </div>
-        <!-- /.navbar-collapse -->
-      </div>
-      <!-- /.container -->
-    </nav>
+      </nav>
 
     <?= $this->Flash->render() ?>
     <div class="container clearfix">

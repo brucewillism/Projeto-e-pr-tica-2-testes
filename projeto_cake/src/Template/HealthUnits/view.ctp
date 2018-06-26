@@ -43,20 +43,16 @@
 
 <center><h3><?= h($healthUnit->name) ?></h3>
 </center>
-<div class="cards container">
-  <div class="w3-panel w3-card w3-half" style="float:left;">
-    <center>
-      <header class="w3-container w3-light-blue ">
-        <b>
-          <h10 style="font-size: 1.2em;">
+<div class="container font">
+  <div class="card-deck">
+    <div class="card">
+      <div class="card-body text-center">
+       <center>
+          <h3 class="font">
             Informações da Unidade
-          </h10>
-        </b>
-      </header>
-
-    </center>
-    <div class="conteudo">
-      <b>Telefone</b>
+          </h3>
+      </center>
+       <b>Telefone</b>
       <p><?= h($healthUnit->telephone) ?></p>
 
       <b>CEP</b>
@@ -70,37 +66,29 @@
       <button class="btn btn-primary" type="button" onclick="DisplayMapa(this)">
         Mostrar Mapa
       </button>
+
+      </div>
     </div>
-  </div>
- <div class="related direitadiv">
-    <div class="w3-panel w3-card">
-     <header class="w3-container w3-light-blue">
-      <center>
-        <b>
-          <h10 style="font-size: 1.2em;">
+    <div class="card">
+      <div class="card-body text-center">
+        <center>
+          <h3 class="font">
             Especialidades
-          </h10>
-        </b>
-      </center>
-    </header>
-    <div class="conteudo">
-      <?php if (!empty($healthUnit->specialties)): ?>
-
-       <?php foreach ($healthUnit->specialties as $specialties): ?>
-         <h3><?= h($specialties->name) ?></h3><br>
-       <?php endforeach; ?>
-
-       <?php else: ?>
-        <p></p>
-        <div class="alert alert-info">
-          <b>Informação não encontrada</b>
-        </div>
-
-      <?php endif; ?>
+          </h3>
+        </center>
+        <?php if (!empty($healthUnit->specialties)): ?>
+        <?php foreach ($healthUnit->specialties as $specialties): ?>
+          <p><?= h($specialties->name) ?></p><br>
+        <?php endforeach; ?>
+        <?php else: ?>
+         <p></p>
+         <div class="alert alert-info">
+           <b>Informação não encontrada</b>
+         </div>
+        <?php endif; ?>
+      </div>
     </div>
-  </div>
 </div>
-</div> 
 
 <div class="container mapa">
   <h4>Localização</h4>
@@ -117,7 +105,7 @@
             <?= $this->Html->image("author_comments.png") ?>
             <b><?= ucfirst($comentario->author) ?></b>
             <span class="says">disse:</span>
-          </div>
+           </div>
 
           <p class="comment-content">
             <?= ucfirst($comentario->content) ?>
