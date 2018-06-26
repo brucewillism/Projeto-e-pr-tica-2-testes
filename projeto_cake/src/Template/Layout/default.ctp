@@ -24,6 +24,8 @@ $loguser = $this->request->getSession()->read("Auth.User");
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <!-- Core JavaScript Files -->
   <?= $this->Html->script("jquery/jquery-3.2.1.min.js") ?> 
   <?= $this->Html->script('jquery/jquery.easing.min.js') ?>
@@ -108,6 +110,9 @@ $loguser = $this->request->getSession()->read("Auth.User");
             </li>
             <li>
               <?= $this->Html->link("Contato","/#contato") ?>
+            </li>
+            <li>
+              <?= $this->Html->link("Ajuda","/#") ?>
             </li>
             <?php if ($loguser): ?>
               <li><?= $this->Html->Link('Bem vindo '.explode(" ",$loguser['name'])[0],['controller'=>'users','action'=>'view',$loguser["id"]]) ?> </li>

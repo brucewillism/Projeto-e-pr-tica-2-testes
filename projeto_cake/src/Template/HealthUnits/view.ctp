@@ -44,9 +44,9 @@
 <center><h3><?= h($healthUnit->name) ?></h3>
 </center>
 <div class="cards container">
-  <div class="w3-panel w3-card" style="float:left;">
+  <div class="w3-panel w3-card w3-half" style="float:left;">
     <center>
-      <header class="w3-container w3-light-blue">
+      <header class="w3-container w3-light-blue ">
         <b>
           <h10 style="font-size: 1.2em;">
             Informações da Unidade
@@ -72,7 +72,7 @@
       </button>
     </div>
   </div>
-  <div class="related direitadiv">
+ <div class="related direitadiv">
     <div class="w3-panel w3-card">
      <header class="w3-container w3-light-blue">
       <center>
@@ -87,11 +87,11 @@
       <?php if (!empty($healthUnit->specialties)): ?>
 
        <?php foreach ($healthUnit->specialties as $specialties): ?>
-         <b><?= h($specialties->name) ?></b><br>
+         <h3><?= h($specialties->name) ?></h3><br>
        <?php endforeach; ?>
 
        <?php else: ?>
-
+        <p></p>
         <div class="alert alert-info">
           <b>Informação não encontrada</b>
         </div>
@@ -100,7 +100,7 @@
     </div>
   </div>
 </div>
-</div>
+</div> 
 
 <div class="container mapa">
   <h4>Localização</h4>
