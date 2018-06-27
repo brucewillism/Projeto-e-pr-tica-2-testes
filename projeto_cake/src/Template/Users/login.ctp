@@ -1,17 +1,18 @@
 
-<div class="users view form large-4 medium-8 container content	">
+<div class="form-group ">
 <?= $this->Flash->render('Auth') ?>
 <?= $this->Form->create() ?>
-	<center>
 			<fieldset>
-				<legend><?= __('Por favor, entre com seu usuario e senha:') ?><legend>
-				<?= $this->Form->control('username', ['label'=>'Usuário'])?>
-				<?= $this->Form->control('password', ['label'=>'Senha'])?>
+      		<h3 id="contato" class="text-center">Conectar </h3>
+				<?= $this->Form->control('username',["label"=>"Usuário","class"=>"form-control","placeholder"=>"Entre com seu nome de usuário"]); ?>
+				<?= $this->Form->control('password',['label'=>'Senha',"class"=>"form-control","placeholder"=>"Digite sua senha"]); ?> 
 			</fieldset>
-		<?= $this->Form->button(__('Login')); ?>
-		 	<td class="action">
-		        <a href="add" > Ou Cadastre-se</a>
-		    </td>
-	</center>
+			<br>
+		<?= $this->Form->button(__('Login'),["class"=>"btn btn-primary"]) ?>
+
+	    <a class="btn btn-primary" href="add" > Ou Cadastre-se</a>
+
 <?= $this->Form->end() ?>
 </div>
+
+
