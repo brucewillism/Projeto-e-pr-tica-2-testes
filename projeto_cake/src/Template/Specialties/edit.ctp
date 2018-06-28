@@ -23,8 +23,9 @@
     <fieldset>
         <legend><?= __('Edit Specialty') ?></legend>
         <?php
-            echo $this->Form->control('name');
-            echo $this->Form->control('health_units._ids', ['options' => $healthUnits]);
+            echo $this->Form->control('health_units._ids', ['label'=>'Escolha um posto de saúde',"class"=>"form-control",'options' => $healthUnits] );
+            echo $this->Form->control('name' , ['label'=>'Especialidades',"class"=>"form-control"]);
+        
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

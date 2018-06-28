@@ -36,6 +36,8 @@ $loguser = $this->request->getSession()->read("Auth.User");
   <?= $this->Html->script('owl.carousel.min.js') ?>
   <?= $this->Html->script('nivo-lightbox.min.js') ?>
   <?= $this->Html->script('custom.js') ?>
+  <?= $this->Html->css('tables.css') ?>
+
 
   <!-- css -->
   <?= $this->Html->css('https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css')?>

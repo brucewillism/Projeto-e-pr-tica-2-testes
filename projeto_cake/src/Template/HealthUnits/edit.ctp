@@ -25,17 +25,14 @@
     <fieldset>
         <legend><?= __('Edit Health Unit') ?></legend>
         <?php
-            echo $this->Form->control('name');
-            echo $this->Form->control('telephone');
-            echo $this->Form->control('CEP');
-            echo $this->Form->control('complete_address');
-            echo $this->Form->control('latitude');
-            echo $this->Form->control('longitude');
-            echo $this->Form->control('business_hours');
-            echo $this->Form->control('users._ids', ['options' => $users]);
+            echo $this->Form->control('name', ["label"=>"Nome da unidade","class"=>"form-control"]);
+            echo $this->Form->control('telephone',["label"=>"Telefone","class"=>"form-control"]);
+            echo $this->Form->control('business_hours',["label"=>"Horario de atendimento","class"=>"form-control"]);
+            echo $this->Form->control('CEP',["label"=>"Cep","class"=>"form-control"]);
+            echo $this->Form->control('complete_address',["label"=>"Endereço completo","class"=>"form-control"]);
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Salvar Alterações'),["class"=>"btn btn-primary"]) ?>
     <?= $this->Form->end() ?>
 </div>
 </center>

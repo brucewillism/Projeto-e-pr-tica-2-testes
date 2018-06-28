@@ -24,14 +24,15 @@
         <legend><?= __('Editar perfil') ?></legend>
         <?php
            
-            echo $this->Form->control('name', ['label'=>'Nome']);
-            echo $this->Form->control('username', ['label'=>'Usuário']);
-            echo $this->Form->control('password', ['label'=>'Senha']);
-            echo $this->Form->control('email');
+            echo $this->Form->control('name', ['label'=>'Nome',"class"=>"form-control"]);
+            echo $this->Form->control('username', ['label'=>'Usuário',"class"=>"form-control"]);
+            echo $this->Form->control('password', ['label'=>'Senha',"class"=>"form-control"]);
+            echo $this->Form->control('email', ['label'=>'Email',"class"=>"form-control"]);
             
             // echo $this->Form->control('health_units._ids', ['options' => $healthUnits]);
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Salvar Alterações'),["class"=>"btn btn-primary"]) ?>
     <?= $this->Form->end() ?>
 </div>
+

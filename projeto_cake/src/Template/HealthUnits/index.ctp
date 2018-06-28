@@ -21,8 +21,9 @@
                 <th scope="col"><?= $this->Paginator->sort('telefone') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('CEP') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('endereço') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('latitude') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('longitude') ?></th>
+<!--                 <th scope="col"><?= $this->Paginator->sort('latitude') ?></th>
+ --><!--                 <th scope="col"><?= $this->Paginator->sort('longitude') ?></th>
+ -->                
                 <th scope="col"><?= $this->Paginator->sort('Horário de Atendimento') ?></th>
                 <th scope="col" class="actions"><?= __('ações') ?></th>
             </tr>
@@ -34,8 +35,9 @@
                 <td><?= h($healthUnit->telephone) ?></td>
                 <td><?= h($healthUnit->CEP) ?></td>
                 <td><?= h($healthUnit->complete_address) ?></td>
-                <td><?= h($healthUnit->latitude) ?></td>
-                <td><?= h($healthUnit->longitude) ?></td>
+<!--                 <td><?= h($healthUnit->latitude) ?></td>
+ --><!--                 <td><?= h($healthUnit->longitude) ?></td>
+ -->
                 <td><?= h($healthUnit->business_hours) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $healthUnit->id]) ?>
