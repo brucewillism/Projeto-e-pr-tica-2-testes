@@ -8,40 +8,6 @@
               <h1 class="h-ultra">INFOSUS</h1>
             </center>  
           </div>
-          <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
-            <h4 class="h-light">Nesse site você encontrará informações sobre as Unidades Básicas de Saúde da cidade de Igarassu. Vantagens:</h4>
-          </div> 
-          <div class="well well-trans">
-            <div class="wow fadeInRight" data-wow-delay="0.1s">
-
-              <ul class="lead-list">
-                <li>
-                  <span class="fa fa-check fa-2x icon-success"></span> 
-                  <span class="list">
-                    <strong>Informações Confiáveis</strong><br/>
-                  </span>
-                </li>
-                <li>
-                  <span class="fa fa-check fa-2x icon-success"></span> 
-                  <span class="list">
-                    <strong>Simplicidade</strong><br />
-                  </span>
-                </li>
-                <li>
-                  <span class="fa fa-check fa-2x icon-success"></span>
-                   <span class="list">
-                    <strong>Fácil Acesso</strong><br/>
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div> 
-          <center>
-            <h3>Confira!</h3>
-            <a href="#service" class="btn-circle js-scroll-trigger" tabindex="-1">
-              <i class="fa fa-angle-double-down animated" tabindex="-1"></i>
-            </a>
-          </center>
         </div>
       </div>
     </div>
