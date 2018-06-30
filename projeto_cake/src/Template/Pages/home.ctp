@@ -13,14 +13,6 @@
     </div>
   </div> 
 </section>
-
-
- <!--  <section id="service" class="home-section paddingtop-80">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 text-center">
-        </section> -->
-
         <section id="service" class="home-section paddingtop-80">
           <div class="container">
             <div class="row">
@@ -76,7 +68,7 @@
    </section>
 
 
-   <section id="equipe" class="home-section bg-gray paddingbot-60">
+   <!-- <section id="equipe" class="home-section bg-gray paddingbot-60">
     <div class="container marginbot-50">
       <div class="container">
         <div class="col-lg-12 col-lg-offset-2">
@@ -86,8 +78,8 @@
             </div>
           </div>
           <div class="divider-short"></div>
-          <!-- <img src="../css/img/team/2.jpg"> -->
-          <!-- <?= $this->Html->image('team/2.jpg') ?> -->
+           <img src="../css/img/team/2.jpg">
+          <?= $this->Html->image('team/2.jpg') ?>
           <center>
             <p> Bruce Willis &nbsp;&nbsp;&nbsp; Juliana Maria &nbsp;&nbsp;&nbsp; Milena Lins &nbsp;&nbsp;&nbsp; Thiago Vinicius &nbsp;&nbsp;&nbsp; Wandeson José </p>
 
@@ -96,12 +88,4 @@
       </div>
     </div>
 
-  </section>
-
-
-
-</section>
-
-
-
-</div>
+  </section> -->

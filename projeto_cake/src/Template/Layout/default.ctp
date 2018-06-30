@@ -70,65 +70,76 @@ $loguser = $this->request->getSession()->read("Auth.User");
 </head>
 
 <body id="page-top" data-spy="scroll">
-
-    <div style="background-color: turquoise; color: turquoise;">
-      ahasa
-    </div>
-
-    <nav class="navbar navbar-expand-md bg-light navbar-dark sticky-top">
-
-          <?= $this->Html->link(
-            $this->Html->image('logo.png',["class"=>"logo"]
-          ), '/', array('escape' => false,'class'=>'navbar-brand')
-          );
-          ?>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" style="background-color: lightgray;">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link"><?= $this->Html->link("Início","/#intro") ?></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link"><?= $this->Html->link("Pesquisa ","/#service") ?></a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link"><?= $this->Html->Link("Quem somos ","/#equipe") ?></a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link"></a><?= $this->Html->link("Ajuda ","/#")?></a>
-            </li>
-
-            <?php if ($loguser): ?>
-              <li class="nav-item"><?= $this->Html->Link('Bem vindo '.explode(" ",$loguser['name'])[0],['controller'=>'users','action'=>'view',$loguser["id"]]) ?> </li>
-              <li class="nav-item"><?= $this->Html->link('Sair',['controller' => 'Users', 'action' => 'logout']) ?></li>
-            <?php endif ?>
-          </ul>
+  <div class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="top-area">
+      <div class="container">
+        <div class="row">
         </div>
-      </nav>
-
-    <?= $this->Flash->render() ?>
-    <div class="container clearfix">
-      <?= $this->fetch('content') ?>
+      </div>
     </div>
-    <br><br>
-    <footer style="box-shadow:black">
-      <section id="contato">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 col-md-4">
-              <div class="wow fadeInDown" data-wow-delay="0.1s">
-              </div>
-            </div>
-          </div>
+
+    <div class="container navigation">
+      <div class="navbar header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+          <i class="fa fa-bars"></i>
+        </button>
+
+        <?= $this->Html->link(
+          $this->Html->image('logo.png',["class"=>"logo"]
+        ), '/', array('escape' => false,'class'=>'navbar-brand')
+        );
+        ?>
+
+      </div>
+      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+        <ul class="nav navbar-nav">
+
+          <li>
+            <?= $this->Html->link("Início","/#intro") ?>
+          </li>
+          <li>
+            <?= $this->Html->link("Pesquisa ","/#service") ?>
+          </li>
+
+          <li>
+            <?= $this->Html->Link("Quem somos ","/#equipe") ?>
+          </li>
+
+          <li>
+            <?= $this->Html->link("Ajuda ","/#")?>
+          </li>
+
+          <?php if ($loguser): ?>
+            <li><?= $this->Html->Link('Bem vindo '.explode(" ",$loguser['name'])[0],['controller'=>'users','action'=>'view',$loguser["id"]]) ?> </li>
+            <li><?= $this->Html->link('Sair',['controller' => 'Users', 'action' => 'logout']) ?></li>
+          <?php endif ?>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+
+  <?= $this->Flash->render() ?>
+  <div class="container clearfix">
+    <?= $this->fetch('content') ?>
+  </div>
+  <br><br>
+  <footer style="box-shadow:black">
+    <section id="contato">
+      <div class="container">
+        <div class="row">
           <div class="col-sm-6 col-md-4">
             <div class="wow fadeInDown" data-wow-delay="0.1s">
             </div>
-            <div class="wow fadeInDown" data-wow-delay="0.1s">
-              <div class="widget">
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="wow fadeInDown" data-wow-delay="0.1s">
+          </div>
+          <div class="wow fadeInDown" data-wow-delay="0.1s">
+            <div class="widget">
                 <!--<p></p>
                 <center>
                   <h3 id="contato" class="h-bold text-center">Envie-nos uma mensagem!</h3>
@@ -143,7 +154,7 @@ $loguser = $this->request->getSession()->read("Auth.User");
                     </fieldset>
                   </form>
                 </center>-->
-               
+
                 <h5>Conecte-se</h5>
                 <ul class="company-social">
                   <li class="social-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -159,4 +170,4 @@ $loguser = $this->request->getSession()->read("Auth.User");
       </section>
     </footer>
   </body>
-</html>
+  </html>
