@@ -3816,7 +3816,6 @@ textarea.input-group-sm>.form-control,textarea.input-group-sm>.input-group-addon
 .pager .disabled>a,.pager .disabled>a:hover,.pager .disabled>a:focus,.pager .disabled>span{
     color:#777;
     cursor:not-allowed;
-    background-color:#fff
 }
 .label{
     display:inline;
@@ -3919,8 +3918,7 @@ a.list-group-item.active>.badge,.nav-pills>.active>a>.badge{
     padding:30px 15px;
     margin-bottom:30px;
     color:inherit;
-    background-color:#F0F8FF
-
+   
 }
 .jumbotron h1,.jumbotron .h1{
     color:inherit
