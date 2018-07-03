@@ -21,7 +21,7 @@
            <div class="row">
              <form class="form-inline" action="../../#service" method="GET">
                <div class="col-md-8 col-md-offset-1"> 
-                 <input class="cssinputo" name="search" type="text" placeholder="Clique aqui para buscar Informações">
+                 <input class="cssinputo" name="search" type="text" placeholder="Procure Por Postos, Municipios, Especialidades">
                </div>
                <div class="col-md-3 botoes-pesquisa">
                  <button class="o" type="submit"><i class="fa fa-search fa-2x"></i></button>
