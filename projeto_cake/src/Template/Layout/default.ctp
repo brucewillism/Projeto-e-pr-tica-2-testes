@@ -102,10 +102,10 @@ $loguser = $this->request->getSession()->read("Auth.User");
               <?= $this->Html->link("Início","/#intro") ?>
             </li>
             <li>
-              <?= $this->Html->Link("Quem somos","/#equipe") ?>
+              <?= $this->Html->Link("Sobre","/#sobre") ?>
             </li>
             <li>
-              <?= $this->Html->link("Contato","/#contato") ?>
+              <?= $this->Html->Link("Equipe","/#equipe") ?>
             </li>
             <li>
               <?= $this->Html->link("Ajuda","/#") ?>
@@ -116,9 +116,7 @@ $loguser = $this->request->getSession()->read("Auth.User");
             <?php endif ?>
           </ul>
         </div>
-        <!-- /.navbar-collapse -->
       </div>
-      <!-- /.container -->
     </nav>
 
     <?= $this->Flash->render() ?>
@@ -140,21 +138,6 @@ $loguser = $this->request->getSession()->read("Auth.User");
             </div>
             <div class="wow fadeInDown" data-wow-delay="0.1s">
               <div class="widget">
-                <!--<p></p>
-                <center>
-                  <h3 id="contato" class="h-bold text-center">Envie-nos uma mensagem!</h3>
-                </center>
-                <center>
-                  <form  autocomplete="off">
-                    <fieldset>
-                      <label>Nome:</label><br><input class="cssinput" type="text"><br>
-                      <label>Assunto:</label><br><input class="cssinput" type="text"><br>
-                      <label>Mensagem:</label><br><textarea class="csstextarea" cols="35" rows="8"></textarea><br>
-                      <input class="btn_submit" type="submit" value="Enviar">
-                    </fieldset>
-                  </form>
-                </center>-->
-               
                 <h5>Conecte-se</h5>
                 <ul class="company-social">
                   <li class="social-facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
