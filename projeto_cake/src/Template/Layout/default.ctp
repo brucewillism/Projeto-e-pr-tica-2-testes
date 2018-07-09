@@ -41,7 +41,8 @@ $loguser = $this->request->getSession()->read("Auth.User");
 
   <!-- css -->
 <!--   <?= $this->Html->css('bootstrap.min.css') ?>
- -->    <?= $this->Html->css('bootstrap4.1.min.css') ?>
+ -->    
+  <?= $this->Html->css('bootstrap4.1.min.css') ?>
 
   <?= $this->Html->css('font-awesome/css/font-awesome.min.css') ?>
   <?= $this->Html->css('plugins/cubeportfolio/css/cubeportfolio.min.css') ?>

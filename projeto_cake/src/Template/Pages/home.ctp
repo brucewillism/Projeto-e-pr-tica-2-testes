@@ -1,3 +1,6 @@
+<br><br><br><br>
+<br><br><br><br>
+     
       <div class="row justify-content-center">
         <div class="align-self-center mr-3 ">
       <!--             <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
@@ -26,7 +29,7 @@
                 <button class="btn btn-outline-secondary" type="submit" title="Pesquisar">Pesquisar</button>
 
               <?php else: ?>
-                <input  class="form-control" name="search" type="text" placeholder="Procure Por Postos, Municipios, Especialidade">
+                <input  class="form-control" name="search" type="text" placeholder="Procure Por Postos, Municipios, Especialidade" title="Pesquise sua de unidade de saúde, Você pode pesquisar por endereço,cep, lugar ou nome da unidade, entre outras formas">
                 <button class="btn btn-outline-secondary" type="submit">Pesquisar</i></button>
 
               <?php endif ?>
