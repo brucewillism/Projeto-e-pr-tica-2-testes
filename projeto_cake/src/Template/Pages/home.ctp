@@ -30,7 +30,7 @@
 
               <?php else: ?>
                 <input  class="form-control" name="search" type="text" placeholder="Procure Por Postos, Municipios, Especialidade" title="Pesquise sua de unidade de saúde, Você pode pesquisar por endereço,cep, lugar ou nome da unidade, entre outras formas">
-                <button class="btn btn-outline-secondary" type="submit">Pesquisar</i></button>
+                <button class="btn btn-outline-secondary" style="background-color: #6c757d;" type="submit">Pesquisar</i></button>
 
               <?php endif ?>
 

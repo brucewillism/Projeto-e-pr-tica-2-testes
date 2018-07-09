@@ -17,7 +17,7 @@
     
 .card-body {
     -ms-flex: 1 1 auto;
-    height: 30em;
+    height: 32em;
     flex: 1 1 auto;
     padding: 1.25rem;
     background-color: #d0f9fb;
@@ -30,7 +30,7 @@
     border-color: black;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: #CEECF5;
+    box-shadow: 0 0 14px 0px black;
   }
 
 
@@ -279,7 +279,8 @@ h1.font-light,h2.font-light,h3.font-light,h4.font-light,h5.font-light,h6.font-li
 
 p {
     margin: 0 0 20px;
-   font-family: arial;
+   font-family: 'Roboto', sans-serif;
+   font-size: 1.2em;
 }
 
 p.medium {

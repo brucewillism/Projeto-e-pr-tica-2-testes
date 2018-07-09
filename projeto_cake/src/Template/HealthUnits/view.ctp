@@ -8,7 +8,7 @@
 <?= $this->Html->css('localizacao_unidade.css') ?>
 <?= $this->fetch('css') ?>
 
-
+<br><br><br>
 
 
 <div class="container">
@@ -35,19 +35,20 @@
             </form>
           </div>
         </div>
-
+        <br><br>
         <center>
           <h3><?= h($healthUnit->name) ?></h3>
         </center>
+        <br><br>
         <div class="row">
           <div class="col-sm-6">
         <div class="card-group"> 
           <div class="card">
             <div class="card-body">
              <center>
-              <h3 class="font">
+              <h4 class="font">
                 Informações da Unidade
-              </h3>
+              </h4>
             </center>
             <b>Telefone</b>
             <p><?= h($healthUnit->telephone) ?></p>
@@ -63,6 +64,7 @@
             <button class="btn btn-primary" type="button" onclick="DisplayMapa(this)">
               Mostrar Mapa
             </button>
+            <button class="btn btn-primary">Editar </button>
           
           </div>
           </div>
@@ -71,14 +73,13 @@
           <div class="card" style="margin-left: 1.6%" >
             <div class="card-body">
              <center>
-              <h3 class="font">
+              <h4 class="font">
                 Especialidades
-
-              </h3>
+              </h4>
             </center>
             <?php if (!empty($healthUnit->specialties)): ?>
               <?php foreach ($healthUnit->specialties as $specialties): ?>
-                <p><?= h($specialties->name) ?></p><br>
+                <p style="font-size: 1.4em"><?= h($specialties->name) ?></p><br>
               <?php endforeach; ?>
               <?php else: ?>
                <p></p>
@@ -86,6 +87,7 @@
                  <b>Informação não encontrada</b>
                </div>
              <?php endif; ?>
+             <button class="btn btn-primary">Editar</button>
            </div>
          </div>
 
@@ -95,6 +97,7 @@
 
 
    </div>
+   <br><br>
    <div class="container mapa">
     <h4>Localização</h4>
     <div id="map"></div>
@@ -129,14 +132,10 @@
       </div>
     </div>
 
-    <div class="wow fadeInDown col-md-6 col-md-offset-3" data-wow-delay="0.1s">
-      <div class="widget">
+    <div class="wow fadeInDown col-md-6 col-md-offset-3" data-wow-delay="0.1s" style="margin-left: 30em;">
         <p></p>
         <br><br><br>
-        <center>
           <h3 id="contato" class="h-bold text-center">Deixe seu comentário!</h3>
-        </center>
-        <center>
           <?= $this->Form->create($comment,[ 'url'  =>  [ 'controller'=>'comments',"action"=>"add" ]]) ?>
           <fieldset>
             <?= $this->Form->control('author',["label"=>"Seu nome","class"=>"inpt form-control"]); ?>
@@ -147,11 +146,12 @@
             <?= $this->Form->control(
               'health_unit_id',['type'=>"hidden","default"=>$healthUnit->id]);?>
               <br>
+              <center>
               <?= $this->Form->button(__('Enviar'),["class"=>"btn btn-primary pa"])?>
               <?= $this->Form->end() ?>
+            </center>
             </fieldset>
           </form>
-        </center>
       </div>
     </div>
 
