@@ -40,7 +40,9 @@ $loguser = $this->request->getSession()->read("Auth.User");
   <?= $this->Html->script('custom.js') ?>
 
   <!-- css -->
-  <?= $this->Html->css('bootstrap.min.css') ?>
+<!--   <?= $this->Html->css('bootstrap.min.css') ?>
+ -->    <?= $this->Html->css('bootstrap4.1.min.css') ?>
+
   <?= $this->Html->css('font-awesome/css/font-awesome.min.css') ?>
   <?= $this->Html->css('plugins/cubeportfolio/css/cubeportfolio.min.css') ?>
   <?= $this->Html->css('nivo-lightbox.css') ?>
@@ -69,7 +71,7 @@ $loguser = $this->request->getSession()->read("Auth.User");
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-
+<!-- 
   <div id="wrapper">
 
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -92,10 +94,9 @@ $loguser = $this->request->getSession()->read("Auth.User");
           );
           ?>
 
+         </div>
 
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
+        <! Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
           <ul class="nav navbar-nav">
             <li>
@@ -117,7 +118,7 @@ $loguser = $this->request->getSession()->read("Auth.User");
           </ul>
         </div>
       </div>
-    </nav>
+    </nav> 
 
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
