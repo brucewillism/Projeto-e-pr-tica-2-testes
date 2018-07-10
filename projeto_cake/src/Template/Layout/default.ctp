@@ -13,8 +13,8 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-$title = "INFOSUS";
-$cakeDescription = "INFOSUS";
+$title = "InfoSus";
+$cakeDescription = "InfoSus";
 $loguser = $this->request->getSession()->read("Auth.User");
 ?>
 <!DOCTYPE html>
@@ -104,7 +104,7 @@ $loguser = $this->request->getSession()->read("Auth.User");
     <div class="container clearfix">
       <?= $this->fetch('content') ?>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br>
     <footer style="box-shadow:black">
       <section id="contato">
         <div class="container">

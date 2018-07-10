@@ -18,7 +18,7 @@ use Cake\Core\Configure;
 use Cake\Network\Exception\ForbiddenException;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
-use Cake\Datasource\ConnectionManager;
+
 /**
  * Static content controller
  *
@@ -40,50 +40,38 @@ class PagesController extends AppController
      */
     public function display(...$path)
     {   
-        $unidade = $this->loadModel('HealthUnits');
-        $conn = ConnectionManager::get('default');
-
 
         if($this->request->getQuery('search')){
-            $palavra="%".$this->request->getQuery('search')."%";
-            $sql = "SELECT distinct(h.name),h.id from health_units as h 
-            inner join health_units_specialties 
-            on h.id = health_units_specialties.health_unit_id 
-            inner join specialties 
-            on specialties.id = health_units_specialties.specialtie_id  
-            where h.name Like '".$palavra."' 
-            or complete_address LIKE '".$palavra."' 
-            or specialties.name LIKE '".$palavra."'";
+            $unidade = $this->loadModel('HealthUnits');
+            $palavra = "%".$this->request->getQuery('search')."%";
             
+            $unidades = $unidade->find('all',
+                ['conditions'=>
+                    [
+                        "OR"=>[
+                            'HealthUnits.name LIKE'=> $palavra,
+                            'HealthUnits.complete_address LIKE'=> $palavra,
+                        ]
+                    ],
+                    'order'=>['HealthUnits.name'=>'ASC'],
+                    'limit'=>10
+                ]
+            );
+            $this->set("unidades",$unidades->toArray());
+             $this->set("palavra",$palavra);
 
-            $stmt = $conn->execute($sql);
-
-            $unidades = $stmt->fetchAll('assoc');
-
-            // $unidades = $unidade->find('all',
-            //     [
-            //         'conditions'=>
-            //         [
-            //             "OR"=>[
-            //                 'HealthUnits.name LIKE'=> $palavra,
-            //                 'HealthUnits.complete_address LIKE'=> $palavra,
-            //             ]
-            //         ],
-            //         'order'=>['HealthUnits.name'=>'ASC'],
-            //         'limit'=>10
-            //     ]
-            // );
         }
         else{
+            $unidade = $this->loadModel('HealthUnits');
             $unidades = $unidade->find('all',
                 [
-                    'limit'=>10,
-                    'order'=>['HealthUnits.name'=>'ASC']
+                'limit'=>10,
+                'order'=>['HealthUnits.name'=>'ASC']
                 ]              
             );
+            $this->set("unidades",$unidades->toArray());
         }
         
-        $this->set("unidades",$unidades);
 
         $count = count($path);
         if (!$count) {
