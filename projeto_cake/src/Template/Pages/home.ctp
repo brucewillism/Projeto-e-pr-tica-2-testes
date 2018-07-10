@@ -40,7 +40,6 @@
 
 
     <!--  erro na função sizeof trocando pro array, (sizeof ($unidades))   -->
-
 <div class="jumbotron">
   <?php if (isset($palavra)): ?>
       <?php if (sizeof($unidades) > 0): ?>

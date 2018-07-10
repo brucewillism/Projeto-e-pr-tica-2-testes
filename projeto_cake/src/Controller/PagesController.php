@@ -47,14 +47,23 @@ class PagesController extends AppController
 
         if($this->request->getQuery('search')){
             $palavra="%".$this->request->getQuery('search')."%";
-            $sql = "SELECT distinct(h.name),h.id from health_units as h 
-            inner join health_units_specialties 
-            on h.id = health_units_specialties.health_unit_id 
-            inner join specialties 
-            on specialties.id = health_units_specialties.specialtie_id  
-            where h.name Like '".$palavra."' 
-            or complete_address LIKE '".$palavra."' 
-            or specialties.name LIKE '".$palavra."'";
+            
+            // com inner join
+            // $sql = "SELECT h.name,h.id from health_units as h 
+            // inner join health_units_specialties 
+            // on h.id = health_units_specialties.health_unit_id 
+            // inner join specialties 
+            // on specialties.id = health_units_specialties.specialtie_id  
+            // where h.name Like '".$palavra."' 
+            // or complete_address LIKE '".$palavra."' 
+            // or specialties.name LIKE '".$palavra."'";
+            
+            // sem o inner join
+            $sql = "
+            SELECT h.name,h.id from health_units as h  
+            where h.name LIKE '".$palavra."' 
+            or complete_address LIKE '".$palavra."'";
+            
             
 
             $stmt = $conn->execute($sql);
