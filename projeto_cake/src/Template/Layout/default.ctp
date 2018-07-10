@@ -24,6 +24,9 @@ $loguser = $this->request->getSession()->read("Auth.User");
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
   <!-- Core JavaScript Files -->
   <?= $this->Html->script("jquery/jquery-3.2.1.min.js") ?> 
@@ -72,54 +75,30 @@ $loguser = $this->request->getSession()->read("Auth.User");
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-<!-- 
-  <div id="wrapper">
-
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-      <div class="top-area">
-        <div class="container">
-          <div class="row">
-          </div>
-        </div>
-      </div>
-      <div class="container navigation">
-
-        <div class="navbar-header page-scroll">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-            <i class="fa fa-bars"></i>
-          </button>
-
-          <?= $this->Html->link(
-            $this->Html->image('logo.png',["class"=>"logo"]
-          ), '/', array('escape' => false,'class'=>'navbar-brand')
-          );
-          ?>
-
-         </div>
-
-        <! Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-          <ul class="nav navbar-nav">
-            <li>
-              <?= $this->Html->link("Início","/#intro") ?>
-            </li>
-            <li>
-              <?= $this->Html->Link("Sobre","/#sobre") ?>
-            </li>
-            <li>
-              <?= $this->Html->Link("Equipe","/#equipe") ?>
-            </li>
-            <li>
-              <?= $this->Html->link("Ajuda","/#") ?>
-            </li>
+<nav class="navbar navbar-expand-md bg-info navbar-light ae">
+  <a class="navbar-brand text-white ae" href="#">INFOSUS</a>
+  <button class="navbar-toggler xa" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">INÍCIO</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">SOBRE</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">EQUIPE</a>
+      </li>    
             <?php if ($loguser): ?>
-              <li><?= $this->Html->Link('Bem vindo '.explode(" ",$loguser['name'])[0],['controller'=>'users','action'=>'view',$loguser["id"]]) ?> </li>
-              <li><?= $this->Html->link('Sair',['controller' => 'Users', 'action' => 'logout']) ?></li>
+              <?= $this->Html->Link('Bem vindo '.explode(" ",$loguser['name'])[0],['controller'=>'users','action'=>'view',$loguser["id"]]) ?> </li>
+              <?= $this->Html->link('Sair',['controller' => 'Users', 'action' => 'logout']) ?></li>
             <?php endif ?>
-          </ul>
-        </div>
-      </div>
-    </nav> 
+    </ul>
+  </div>  
+</nav>
+<br>
 
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
