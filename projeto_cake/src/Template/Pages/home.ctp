@@ -1,12 +1,10 @@
-
-     
       <div class="row justify-content-center">
         <div class="align-self-center mr-3 ">
       <!--             <div class="wow fadeInDown" data-wow-offset="0" data-wow-delay="0.1s">
-    -->                
+    -->
   <center>
-    <img src="img/logo.png"  alt="Generic placeholder image" class="mx-auto d-block" style="width:65%"> 
-  </center>  
+    <img src="img/logo.png"  alt="Generic placeholder image" class="mx-auto d-block" style="width:65%">
+  </center>
       <!--             </div>
     -->
   </div>
@@ -41,11 +39,11 @@
 
 
       <!--  erro na função sizeof trocando pro array, (sizeof ($unidades))   -->
-              <div id="d" class="d-none">
+              <div>
               <div class="jumbotron">
-    <?php if (sizeof($unidades) > 0): ?>
+    <?php if (isset($palavra)): ?>
   <?php foreach ($unidades as $unidade): ?>
-    <li id="list"> 
+    <li id="list">
     <u>
       <?= $this->Html->link($unidade['name'],
       ["controller"=>"HealthUnits","action"=>"view",$unidade->id]) ?>
@@ -53,22 +51,12 @@
     </u>
   <?php endforeach ?>
   <?php else: ?>
-          <div class="alert alert-info" role="alert">
+          <!-- <div class="alert alert-info" role="alert">
             Nenhuma unidade encontrada pela busca
-          </div>
+          </div> -->
         <?php endif ?>
     </div>
   </div>
 </div>
 </div>
 </section>
-<script> 
-  $("#s").on("submit", function(){
-  $("#d").removeClass("d-none");
-  })
-   $("#s").on("submit", function(){
-  $("#d").removeClass("d-none");
-  })
-</script>
-
-
