@@ -30,7 +30,7 @@
 
                 <?php endif ?>
 
-      
+
               </div>
             </form>
           </div>
@@ -42,7 +42,7 @@
         <br><br>
         <div class="row">
           <div class="col-sm-6">
-        <div class="card-group"> 
+        <div class="card-group">
           <div class="card">
             <div class="card-body">
              <center>
@@ -65,7 +65,7 @@
               Mostrar Mapa
             </button>
             <button class="btn btn-primary">Editar </button>
-          
+
           </div>
           </div>
           </div>
@@ -90,8 +90,6 @@
              <button class="btn btn-primary">Editar</button>
            </div>
          </div>
-
-
        </div>
      </div>
 
@@ -105,7 +103,7 @@
 
   <div class="container comentarios">
     <center><h4>Comentários</h4></center>
-    <div class="container listaComentarios">
+    <div class="container listaComentarios col-md-8  offset-md-2">
       <?php if(json_encode($comments) != "[]"): ?>
         <?php foreach ($comments as $key => $comentario): ?>
           <div id="div-comment-3" class="comment-body container-fluid">
@@ -132,7 +130,7 @@
       </div>
     </div>
 
-    <div class="wow fadeInDown col-md-6 col-md-offset-3" data-wow-delay="0.1s" style="margin-left: 30em;">
+    <div class="wow fadeInDown col-md-offset-3 col-md-4  offset-md-2" data-wow-delay="0.1s" style="margin-left: 30em;">
         <p></p>
         <br><br><br>
           <h3 id="contato" class="h-bold text-center">Deixe seu comentário!</h3>
@@ -141,7 +139,7 @@
             <?= $this->Form->control('author',["label"=>"Seu nome","class"=>"inpt form-control"]); ?>
 
             <label for="">Mensagem</label>
-            <?= $this->Form->textarea('content',["class"=>"inpt form-control"]); ?>  
+            <?= $this->Form->textarea('content',["class"=>"inpt form-control"]); ?>
 
             <?= $this->Form->control(
               'health_unit_id',['type'=>"hidden","default"=>$healthUnit->id]);?>
@@ -168,14 +166,14 @@
 
       function myMap() {
         var pos = {
-          lat: <?= $healthUnit->latitude ?>, 
+          lat: <?= $healthUnit->latitude ?>,
           lng: <?= $healthUnit->longitude ?>
         };
         var myCenter = pos;
         var mapCanvas = document.getElementById("map");
         var mapOptions = {
-          center: myCenter, zoom: 16, 
-          styles: 
+          center: myCenter, zoom: 16,
+          styles:
           [
           {
             "elementType": "geometry",
@@ -356,7 +354,7 @@
     </script>
   </div>
 
-  <?= 
+  <?=
   $this->Html->script('https://maps.googleapis.com/maps/api/js?key=AIzaSyAVZRzZzK-9O1rJqZs8lsenYQep7nc2LtQ&callback=myMap')
 // $this->Html->script("https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyAVZRzZzK-9O1rJqZs8lsenYQep7nc2LtQ&center=-33.9,151.14999999999998&zoom=12&format=png&maptype=roadmap&style=element:geometry%7Ccolor:0xf5f5f5&style=element:labels.icon%7Cvisibility:off&style=element:labels.text.fill%7Ccolor:0x616161&style=element:labels.text.stroke%7Ccolor:0xf5f5f5&style=feature:administrative.land_parcel%7Celement:labels.text.fill%7Ccolor:0xbdbdbd&style=feature:poi%7Celement:geometry%7Ccolor:0xeeeeee&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:poi.park%7Celement:geometry%7Ccolor:0xe5e5e5&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:road%7Celement:geometry%7Ccolor:0xffffff&style=feature:road.arterial%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:road.highway%7Celement:geometry%7Ccolor:0xdadada&style=feature:road.highway%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:transit.line%7Celement:geometry%7Ccolor:0xe5e5e5&style=feature:transit.station%7Celement:geometry%7Ccolor:0xeeeeee&style=feature:water%7Celement:geometry%7Ccolor:0xc9c9c9&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&size=480x360 ");
   ?>

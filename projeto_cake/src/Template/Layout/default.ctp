@@ -29,7 +29,7 @@ $loguser = $this->request->getSession()->read("Auth.User");
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
   <!-- Core JavaScript Files -->
-  <?= $this->Html->script("jquery/jquery-3.2.1.min.js") ?> 
+  <?= $this->Html->script("jquery/jquery-3.2.1.min.js") ?>
   <?= $this->Html->script('jquery/jquery.easing.min.js') ?>
   <?= $this->Html->script('jquery/jquery.scrollTo.js') ?>
   <?= $this->Html->script('jquery/jquery.appear.js') ?>
@@ -44,7 +44,7 @@ $loguser = $this->request->getSession()->read("Auth.User");
 
   <!-- css -->
 <!--   <?= $this->Html->css('bootstrap.min.css') ?>
- -->    
+ -->
   <?= $this->Html->css('bootstrap4.1.min.css') ?>
 
   <?= $this->Html->css('font-awesome/css/font-awesome.min.css') ?>
@@ -61,7 +61,7 @@ $loguser = $this->request->getSession()->read("Auth.User");
   <?= $this->Html->css('bodybg/bg1.css') ?>
   <!-- template skin -->
   <?= $this->Html->css('color/default.css') ?>
-  
+
 
   <?= $this->Html->meta('icon') ?>
   <title>
@@ -75,28 +75,24 @@ $loguser = $this->request->getSession()->read("Auth.User");
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
-<nav class="navbar navbar-expand-md bg-info navbar-light ae">
-  <a class="navbar-brand text-white ae" href="#">INFOSUS</a>
+<nav class="navbar navbar-expand-md bg-info navbar-light p-0 ae">
+  <li class="navbar navbar-light ae">
+<?= $this->Html->link("INFOSUS","/#intro",['class' =>'text-white']) ?></li>
   <button class="navbar-toggler xa" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">INÍCIO</a>
+  <div class="collapse navbar-collapse nav justify-content-end" id="collapsibleNavbar">
+    <ul class="navbar-nav " >
+
+      <li class="navbar navbar-light ae">
+         <?= $this->Html->Link("Sobre","/#sobre",['class' =>'text-white']) ?>
       </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">SOBRE</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link text-white" href="#">EQUIPE</a>
-      </li>    
             <?php if ($loguser): ?>
               <?= $this->Html->Link('Bem vindo '.explode(" ",$loguser['name'])[0],['controller'=>'users','action'=>'view',$loguser["id"]]) ?> </li>
               <?= $this->Html->link('Sair',['controller' => 'Users', 'action' => 'logout']) ?></li>
             <?php endif ?>
     </ul>
-  </div>  
+  </div>
 </nav>
 <br>
 
@@ -104,8 +100,8 @@ $loguser = $this->request->getSession()->read("Auth.User");
     <div class="container clearfix">
       <?= $this->fetch('content') ?>
     </div>
-    <br><br><br><br><br><br><br><br><br>
-    <footer style="box-shadow:black">
+    <br><br><br>
+    <footer style="box-shadow:black;">
       <section id="contato">
         <div class="container">
           <div class="row">
