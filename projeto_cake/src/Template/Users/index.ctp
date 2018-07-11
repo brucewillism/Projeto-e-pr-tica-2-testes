@@ -1,52 +1,59 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\User[]|\Cake\Collection\CollectionInterface $users
- */
-?>
-<?= $this->Html->css('tables.css') ?>
-
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="dropdown-header">
-        <li class="dropdown-header"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('New User'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Health Units'), ['controller' => 'HealthUnits', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Health Unit'), ['controller' => 'HealthUnits', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
-    <h3><?= __('Users') ?></h3>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th scope="col"><?= $this->Paginator->sort('nome') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('usuario') ?></th>
-                <th scope="col"><?= $this->Paginator->sort('email') ?></th>
-                <th scope="col" class="actions"><?= __('Ações') ?></th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($users as $user): ?>
-            <tr>
-                <td><?= h($user->name) ?></td>
-                <td><?= h($user->username) ?></td>
-                <td><?= h($user->email) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $user->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete # {0}?', $user->id)]) ?>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->first('<< ' . __('first')) ?>
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-            <?= $this->Paginator->last(__('last') . ' >>') ?>
-        </ul>
-        <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
+<section id="sobre" class="home-section bg-gray paddingbot-60">
+    <div class="container marginbot-50">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="wow fadeInDown" data-wow-delay="0.1s">
+            <div class="section-heading text-center">
+              <h2 class="h-bold">Sobre</h2>
+            </div>
+          </div>
+         <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
+            <h4 class="h-light">O INFOSUS tem como missão disponibilizar informações sobre as Unidades Básicas de Saúde da cidade de Igarassu. Vantagens:</h4>
+          </div> 
+          <div class="well well-trans">
+            <div class="wow fadeInRight" data-wow-delay="0.1s">
+              <ul class="lead-list">
+                <li>
+                  <span class="fa fa-check fa-2x icon-success"></span> 
+                  <span class="list">
+                    <strong>Informações Confiáveis</strong><br/>
+                  </span>
+                </li>
+                <li>
+                  <span class="fa fa-check fa-2x icon-success"></span> 
+                  <span class="list">
+                    <strong>Fácil Acesso</strong><br />
+                  </span>
+                </li>
+                <li>
+                  <span class="fa fa-check fa-2x icon-success"></span>
+                   <span class="list">
+                    <strong>Centralização de Informações</strong><br/>
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div> 
+        </div>
+      </div>
     </div>
-</div>
+</section>
+
+  <section id="equipe" class="home-section bg-gray paddingbot-60">
+    <div class="container marginbot-50">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+          <div class="wow fadeInDown" data-wow-delay="0.1s">
+            <div class="section-heading text-center">
+              <h2 class="h-bold">Equipe</h2>
+            </div>
+          </div>
+          <div class="divider-short"></div>
+         <br><br>
+         <center>
+            <p> Bruce Willis &nbsp;&nbsp;&nbsp; Jullyana Maria &nbsp;&nbsp;&nbsp; Milena Lins &nbsp;&nbsp;&nbsp; Thiago Vinicius &nbsp;&nbsp;&nbsp; Wandeson José </p><hr>
+          </center>
+        </div>
+      </div>
+    </div>
+</section>

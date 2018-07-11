@@ -318,8 +318,8 @@ p.ultra {
 }
 
 a {
-    color: #666;
-    -webkit-transition: all .2s ease-in-out;
+/*    color: #666;
+*/    -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
     font-size: 1.3em;

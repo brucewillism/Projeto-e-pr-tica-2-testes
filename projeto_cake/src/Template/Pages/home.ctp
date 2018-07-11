@@ -34,22 +34,22 @@
           </div>
         </form>
       </div>
-    </div>
-  </div>
-</div>
 
 
     <!--  erro na função sizeof trocando pro array, (sizeof ($unidades))   -->
-<div class="jumbotron">
+<div class="jumbotron ">
   <?php if (isset($palavra)): ?>
       <?php if (sizeof($unidades) > 0): ?>
         <?php foreach ($unidades as $unidade): ?>
-          <ul>
             <li id="list">
+            <u>
+            <b>
               <?= $this->Html->link($unidade["name"],
               ["controller"=>"HealthUnits","action"=>"view",$unidade["id"] ]) ?>
+            </b>
+            </u>
             </li>
-          </ul>
+
         <?php endforeach ?>
       <?php else: ?>
         <div class="alert alert-info" role="alert">
@@ -58,4 +58,6 @@
       <?php endif ?>
   <?php endif ?>      
 </div>
-      
+</div>
+</div>
+</div>      

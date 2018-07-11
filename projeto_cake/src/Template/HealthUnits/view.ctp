@@ -64,7 +64,11 @@
             <button class="btn btn-primary" type="button" onclick="DisplayMapa(this)">
               Mostrar Mapa
             </button>
-            <button class="btn btn-primary">Editar </button>
+            <b>
+            <i>
+            <?= $this->Html->link(__('Sugerir Edição'), ['action' => 'edit', $healthUnit->id, 'class'=>'btn btn-primary ']) ?>
+            </i>
+            </b>
 
           </div>
           </div>
@@ -87,8 +91,12 @@
                  <b>Informação não encontrada</b>
                </div>
              <?php endif; ?>
-             <button class="btn btn-primary">Editar</button>
-           </div>
+            <b>
+            <i>
+            <?= $this->Html->link(__('Sugerir Edição'), ['action' => 'edit', $healthUnit->id, 'class'=>'btn btn-primary ']) ?>
+            </i>
+            </b>           
+            </div>
          </div>
        </div>
      </div>

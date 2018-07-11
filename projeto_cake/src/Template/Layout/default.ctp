@@ -84,8 +84,8 @@ $loguser = $this->request->getSession()->read("Auth.User");
   <div class="collapse navbar-collapse nav justify-content-end" id="collapsibleNavbar">
     <ul class="navbar-nav " >
 
-      <li class="navbar navbar-light ae">
-         <?= $this->Html->Link("Sobre","/#sobre",['class' =>'text-white']) ?>
+      <li class="navbar navbar-light text-white ae">
+         <?= $this->Html->Link("Sobre",['class' =>'text-white', 'action'=>'sobre']) ?>
       </li>
             <?php if ($loguser): ?>
               <?= $this->Html->Link('Bem vindo '.explode(" ",$loguser['name'])[0],['controller'=>'users','action'=>'view',$loguser["id"]]) ?> </li>
