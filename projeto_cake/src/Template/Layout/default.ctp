@@ -82,14 +82,14 @@ $loguser = $this->request->getSession()->read("Auth.User");
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse nav justify-content-end" id="collapsibleNavbar">
-    <ul class="navbar-nav " >
 
-      <li class="navbar navbar-light text-white ae">
-         <?= $this->Html->Link("Sobre",['class' =>'text-white', 'action'=>'sobre']) ?>
+      <li class="navbar navbar-light ae">
+        <?= $this->Html->link("Sobre","/pages/sobre",['class' =>'text-white']) ?></li>
+
       </li>
             <?php if ($loguser): ?>
               <?= $this->Html->Link('Bem vindo '.explode(" ",$loguser['name'])[0],['controller'=>'users','action'=>'view',$loguser["id"]]) ?> </li>
-              <?= $this->Html->link('Sair',['controller' => 'Users', 'action' => 'logout']) ?></li>
+              <?= $this->Html->link('Sair',['class' =>'text-white','controller' => 'Users', 'action' => 'logout']) ?></li>
             <?php endif ?>
     </ul>
   </div>
