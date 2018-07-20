@@ -41,15 +41,14 @@
   <?php if (isset($palavra)): ?>
       <?php if (sizeof($unidades) > 0): ?>
         <?php foreach ($unidades as $unidade): ?>
-            <li id="list">
+            <br>
             <u>
             <b>
               <?= $this->Html->link($unidade["name"],
               ["controller"=>"HealthUnits","action"=>"view",$unidade["id"] ]) ?>
             </b>
             </u>
-            </li>
-
+            <br>
         <?php endforeach ?>
       <?php else: ?>
         <div class="alert alert-info" role="alert">
