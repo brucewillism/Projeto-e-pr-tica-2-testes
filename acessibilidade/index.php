@@ -27,8 +27,6 @@
     	</div>
   </center>
 </body>
-<footer style="background-color: white; margin-top: 15em;">
- Conecte-se!
-</footer>
+<?php include_once('footer.php')?>
 </html>
 
