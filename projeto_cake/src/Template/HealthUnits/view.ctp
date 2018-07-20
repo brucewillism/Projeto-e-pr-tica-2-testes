@@ -119,11 +119,34 @@
               <?= $this->Html->image("author_comments.png") ?>
               <b><?= ucfirst($comentario->author) ?></b>
               <span class="says">disse:</span>
+
             </div>
 
             <p class="comment-content">
               <?= ucfirst($comentario->content) ?>
             </p>
+
+                <form method="POST" action="" enctype="multipart/form-data">
+                  <div class="estrelas">
+                    <input type="radio" id="vazio" name="estrela" value="" checked>
+                    
+                    <label for="estrela_um"><i class="fa fa-star-o"></i></label>
+                    <input type="radio" id="estrela_um" name="estrela" value="1">
+                    
+                    <label for="estrela_dois"><i class="fa fa-star-o"></i></label>
+                    <input type="radio" id="estrela_dois" name="estrela" value="2">
+                    
+                    <label for="estrela_tres"><i class="fa fa-star-o"></i></label>
+                    <input type="radio" id="estrela_tres" name="estrela" value="3">
+                    
+                    <label for="estrela_quatro"><i class="fa fa-star-o"></i></label>
+                    <input type="radio" id="estrela_quatro" name="estrela" value="4">
+                    
+                    <label for="estrela_cinco"><i class="fa fa-star-o"></i></label>
+                    <input type="radio" id="estrela_cinco" name="estrela" value="5"><br><br>
+                   
+                  </div>
+                </form>
 
             <div class="row comment-meta commentmetadata">
               <p class="p-comment-data"><?= $comentario->data ?></p>
@@ -138,42 +161,19 @@
       </div>
     </div>
 
-    <div class="wow fadeInDown col-md-offset-3 col-md-4  offset-md-2" data-wow-delay="0.1s" style="margin-left: 30em;">
-        <p></p>
-        <br><br><br>
-        <b>Avalie:</b>
-		<form method="POST" action="" enctype="multipart/form-data">
-			<div class="estrelas">
-				<input type="radio" id="vazio" name="estrela" value="" checked>
-				
-				<label for="estrela_um"><i class="fa fa-star-o"></i></label>
-				<input type="radio" id="estrela_um" name="estrela" value="1">
-				
-				<label for="estrela_dois"><i class="fa fa-star-o"></i></label>
-				<input type="radio" id="estrela_dois" name="estrela" value="2">
-				
-				<label for="estrela_tres"><i class="fa fa-star-o"></i></label>
-				<input type="radio" id="estrela_tres" name="estrela" value="3">
-				
-				<label for="estrela_quatro"><i class="fa fa-star-o"></i></label>
-				<input type="radio" id="estrela_quatro" name="estrela" value="4">
-				
-				<label for="estrela_cinco"><i class="fa fa-star-o"></i></label>
-				<input type="radio" id="estrela_cinco" name="estrela" value="5"><br><br>
-				
-				<input type="submit" class="btn btn-primary pa" value="Enviar">
-				
-			</div>
-		</form>
+   
 		<br><br>
-        <div style="border-radius: 10px!important;background: #ecf0f1;padding: 20px 30px;text-align: center;margin-bottom: 20px;margin-left: 5em; width: 50em;">
+    <div class="container">
+
+        <div class= "container listaComentarios col-md-8  offset-md-2">
+
           <h3 id="contato" class="h-bold text-center">Deixe seu comentário!</h3>
           <?= $this->Form->create($comment,[ 'url'  =>  [ 'controller'=>'comments',"action"=>"add" ]]) ?>
           <fieldset>
-            <?= $this->Form->control('author',["label"=>"Seu nome","class"=>"inpt form-control"]); ?>
+            <?= $this->Form->control('author',["label"=>"Seu nome","placeholder"=>"Digite seu nome","class"=>"inpt form-control"]); ?>
 
             <label for="Digite um comentário sobre as informações dessa página">Mensagem</label>
-            <?= $this->Form->textarea('content',["class"=>"inpt form-control"]); ?>
+            <?= $this->Form->textarea('content',["class"=>"inpt form-control","placeholder"=>"Digite seu comentario",]); ?>
 
             <?= $this->Form->control(
               'health_unit_id',['type'=>"hidden","default"=>$healthUnit->id]);?>
