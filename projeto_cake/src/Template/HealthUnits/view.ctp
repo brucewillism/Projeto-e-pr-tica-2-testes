@@ -172,7 +172,7 @@
           <fieldset>
             <?= $this->Form->control('author',["label"=>"Seu nome","class"=>"inpt form-control"]); ?>
 
-            <label for="">Mensagem</label>
+            <label for="Digite um comentário sobre as informações dessa página">Mensagem</label>
             <?= $this->Form->textarea('content',["class"=>"inpt form-control"]); ?>
 
             <?= $this->Form->control(
