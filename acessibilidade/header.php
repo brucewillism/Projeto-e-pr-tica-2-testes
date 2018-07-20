@@ -32,6 +32,9 @@
       font-family: 'Open Sans', sans-serif;
       font-size:1.2em;
     }
+    .oi:hover {
+    transform: scale(1.0);
+}
     .xa{
       border-color:white;
       border-width:-1em;
@@ -41,6 +44,12 @@
       box-shadow: 0 0 7px 1px black;
       width: 25rem; 
       height: 15rem;
+    }
+    i{
+    	font-size:28px;
+    }
+    .cc{
+    	border-style: none; color:white;background-color: #17a2b8!important;
     }
 
   </style>
