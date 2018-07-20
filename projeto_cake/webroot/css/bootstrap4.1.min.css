@@ -4751,6 +4751,7 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 }
 
 .jumbotron {
+    background-color: #F0F8FF;
     padding: 2rem 1rem;
     margin-bottom: 2rem;
     border-radius: 3rem
