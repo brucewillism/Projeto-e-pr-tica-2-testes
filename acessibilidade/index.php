@@ -23,7 +23,7 @@
 
     <div class="container">
     <div style="background-color: #F0F8FF;padding: 2rem 1rem; border-color: blue">
-    	<b><a style="font-size: 1.5em;" href="pg2.php">Proposta pro cards</a></b>
+    	<b><a style="font-size: 1.5em;" href="pg2.php">Policlinica Sao Lucas</a></b>
     	</div>
   </center>
 </body>
