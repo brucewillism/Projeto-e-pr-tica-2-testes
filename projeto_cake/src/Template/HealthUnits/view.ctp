@@ -26,7 +26,7 @@
 
                 <?php else: ?>
                   <input  class="form-control" name="search" type="text" placeholder="Procure Por Postos, Municipios, Especialidade" title="Pesquise sua de unidade de saúde, Você pode pesquisar por endereço,cep, lugar ou nome da unidade, entre outras formas">
-                  <button class="btn btn-outline-secondary" type="submit">Pesquisar</i></button>
+                  <button class="btn btn-outline-secondary" type="submit"  title="Pesquisar">Pesquisar</i></button>
 
                 <?php endif ?>
 
@@ -61,12 +61,12 @@
 
             <b>Horário de Atendimento</b>
             <p><?= h($healthUnit->business_hours)?></p>
-            <button class="btn btn-primary" type="button" onclick="DisplayMapa(this)">
+            <button class="btn btn-primary" title="Mostrar Mapa" type="button" onclick="DisplayMapa(this)">
               Mostrar Mapa
             </button>
             <b>
             <i>
-            <?= $this->Html->link(__('Sugerir Edição'), ['action' => 'edit', $healthUnit->id, 'class'=>'btn btn-primary ']) ?>
+            <?= $this->Html->link(__('Sugerir Edição'), ['action' => 'edit', $healthUnit->id, 'class'=>'btn btn-primary ', 'title'=>"Sugerir Edição"]) ?>
             </i>
             </b>
 
@@ -93,7 +93,7 @@
              <?php endif; ?>
             <b>
             <i>
-            <?= $this->Html->link(__('Sugerir Edição'), ['action' => 'edit', $healthUnit->id, 'class'=>'btn btn-primary ']) ?>
+            <?= $this->Html->link(__('Sugerir Edição'), ['action' => 'edit', $healthUnit->id, 'class'=>'btn btn-primary ', 'title'=>"Sugerir Edição"]) ?>
             </i>
             </b>           
             </div>
@@ -170,10 +170,10 @@
           <h3 id="contato" class="h-bold text-center">Deixe seu comentário!</h3>
           <?= $this->Form->create($comment,[ 'url'  =>  [ 'controller'=>'comments',"action"=>"add" ]]) ?>
           <fieldset>
-            <?= $this->Form->control('author',["label"=>"Seu nome","placeholder"=>"Digite seu nome","class"=>"inpt form-control"]); ?>
+            <?= $this->Form->control('author',["label"=>"Seu nome","placeholder"=>"Digite seu nome","class"=>"inpt form-control","title"=>"Digite seu nome"]); ?>
 
             <label for="Digite um comentário sobre as informações dessa página">Mensagem</label>
-            <?= $this->Form->textarea('content',["class"=>"inpt form-control","placeholder"=>"Digite seu comentario",]); ?>
+            <?= $this->Form->textarea('content',["class"=>"inpt form-control","placeholder"=>"Digite seu comentario", "title"=>"Digite um comentário sobre as informações dessa página"]); ?>
 
             <?= $this->Form->control(
               'health_unit_id',['type'=>"hidden","default"=>$healthUnit->id]);?>

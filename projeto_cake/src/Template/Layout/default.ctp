@@ -77,14 +77,14 @@ $loguser = $this->request->getSession()->read("Auth.User");
 <body id="page-top" data-spy="scroll" data-target=".navbar-custom">
 <nav class="navbar navbar-expand-md bg-info navbar-light p-0 ae">
   <li class="navbar navbar-light ae">
-<?= $this->Html->link("INFOSUS","/#intro",['class' =>'text-white']) ?></li>
+<?= $this->Html->link("INFOSUS","/#intro",['class' =>'text-white', 'title'=>"infosus"]) ?></li>
   <button class="navbar-toggler xa" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse nav justify-content-end" id="collapsibleNavbar">
 
       <li class="navbar navbar-light ae">
-        <?= $this->Html->link("Sobre","/pages/sobre",['class' =>'text-white']) ?></li>
+        <?= $this->Html->link("Sobre","/pages/sobre",['class' =>'text-white', 'title'=>"infosus"]) ?></li>
 
       </li>
             <?php if ($loguser): ?>
