@@ -27,7 +27,10 @@
               </div>
 
             <?php else: ?>
-              <input  class="form-control"  name="search" type="text" placeholder="Procure Por Postos, Municipios, Especialidade" title="Pesquise sua de unidade de saúde, Você pode pesquisar por endereço,cep, lugar ou nome da unidade, entre outras formas">
+            <div class="tooltip">
+              <input  class="form-control"  name="search" type="text" placeholder="Buscar Unidades Básicas de Saúde de Igarassu">
+              <span class="tooltiptext">Pesquise por Postos, Especialidades, CEP, Horário ...</span>
+            </div>
               <button class="btn btn-outline-secondary"  style="background-color: #6c757d;" type="submit">Pesquisar</button>
 
             <?php endif ?>
