@@ -12,7 +12,7 @@
              <input type="text" class=" form-control" placeholder="Pesquise por Unidades Básicas de Saúde de Igarassu"  aria-describedby="basic-addon2" >
               <div class="input-group-append">
                 <button style="border-style: none;background-color: #17a2b8!important;" type="submit">
-                	<span style="background-color:#17a2b8!important;color: white;border-style: none;" class="input-group-text">PESQUISAR</span></button>
+                	<span style="background-color:#17a2b8!important;color: white;border-style: none;" class="input-group-text" accesskey="p">PESQUISAR</span></button>
                 </div>
             </div>
           </div>
