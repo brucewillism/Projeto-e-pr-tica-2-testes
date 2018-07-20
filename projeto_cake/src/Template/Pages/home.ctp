@@ -21,9 +21,11 @@
           <div class="input-group mb-3">
 
             <?php if (isset($_GET['search'])): ?>
-              <input type="text"  class="form-control input-lg" name="search"  value="<?php echo $_GET['search'];?>" placeholder="Procure Por Postos, Municipios, Especialidade" border="1px solid black" title="Pesquise sua de unidade de saúde, Você pode pesquisar por endereço,cep, lugar ou nome da unidade, entre outras formas">
-              <div class="input-group-append">
-                <button class="btn btn-outline-secondary"  type="submit" title="Pesquisar">Pesquisar</button>
+             <div class="tooltip">
+              <input type="text"  class="form-control input-lg" name="search"  value="<?php echo $_GET['search'];?>" placeholder="Buscar Unidades Básicas de Saúde de Igarassu" border="1px solid black" title="Pesquise sua de unidade de saúde, Você pode pesquisar por endereço,cep, lugar ou nome da unidade, entre outras formas">
+              	<span class="tooltiptext">Pesquise por Postos, Especialidades, CEP, Horário ...</span>
+             </div>
+                <button class="btn btn-outline-secondary" style="background-color: #6c757d;" type="submit" title="Pesquisar">Pesquisar</button>
               </div>
 
             <?php else: ?>
@@ -40,7 +42,7 @@
 
 
     <!--  erro na função sizeof trocando pro array, (sizeof ($unidades))   -->
-<div class="jumbotron ">
+<div class="jumbotron">
   <?php if (isset($palavra)): ?>
       <?php if (sizeof($unidades) > 0): ?>
         <?php foreach ($unidades as $unidade): ?>
