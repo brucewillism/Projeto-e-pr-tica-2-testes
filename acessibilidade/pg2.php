@@ -58,3 +58,4 @@ Mensagem:
 <button  class="oi cc" type="submit" style="border-style: none; color:white;background-color: #17a2b8!important;">Enviar</button></fieldset>
 </center>
 <br>
+<?php include_once('footer.php')?>
