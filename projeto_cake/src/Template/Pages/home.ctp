@@ -20,19 +20,16 @@
         <form action="#service"  id="s" method="GET">
           <div class="input-group mb-3">
 
-            <?php if (isset($_GET['search'])): ?>
-             <div class="tooltip">
+            <?php if (isset($_GET['search'])): ?
               <input type="text"  class="form-control input-lg" name="search"  value="<?php echo $_GET['search'];?>" placeholder="Buscar Unidades Básicas de Saúde de Igarassu" border="1px solid black" title="Pesquise sua de unidade de saúde, Você pode pesquisar por endereço,cep, lugar ou nome da unidade, entre outras formas">
-              	<span class="tooltiptext">Pesquise por Postos, Especialidades, CEP, Horário ...</span>
-             </div>
+              	
                 <button class="btn btn-outline-secondary" style="background-color: #6c757d;" type="submit" title="Pesquisar">Pesquisar</button>
               </div>
 
             <?php else: ?>
-            <div class="tooltip">
+            
               <input  class="form-control"  name="search" type="text" placeholder="Buscar Unidades Básicas de Saúde de Igarassu">
-              <span class="tooltiptext">Pesquise por Postos, Especialidades, CEP, Horário ...</span>
-            </div>
+              
               <button class="btn btn-outline-secondary"  style="background-color: #6c757d;" type="submit">Pesquisar</button>
 
             <?php endif ?>
