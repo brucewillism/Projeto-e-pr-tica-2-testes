@@ -32,8 +32,10 @@
       font-family: 'Open Sans', sans-serif;
       font-size:1.2em;
     }
+
     .oi:hover {
-    transform: scale(1.0);
+    box-shadow: 0 0 7px 1px black;
+
 }
     .xa{
       border-color:white;
