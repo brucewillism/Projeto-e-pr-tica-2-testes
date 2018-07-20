@@ -1,8 +1,15 @@
 <?php include_once('header.php')?>
 <br>
-<center>
+<center><br>
+	<div class="input-group mb-3">
+              <input type="text" class=" xo c" placeholder="Pesquise por Unidades Básicas de Saúde de Igarassu">
+              <div class="input-group-append">
+                <button style="border-style: none;background-color: #17a2b8!important;" type="submit">
+                	<span style="background-color:#17a2b8!important;color: white;border-style: none;" class="input-group-text" accesskey="p">PESQUISAR</span></button>
+                	
+        </div>
 <h3>Policlínica São Lucas</h3>
-<div class="card a" style=" float:left; margin-left: 4em;margin-top: 2em;">
+<div class="card a" style=" float:left; margin-left: 4em;margin-top: 2em;"accesskey="i">
   <div class="card-header" style="background-color:#c8e1ff;">
    <h5> Informações</h5>
   </div>
@@ -24,7 +31,7 @@ OBS: Mapa é opcional terá um botão no card se desejar vizualizar.
 </div>
 <br>
 <center>
-<div style="background-color: #c8e1ff; width: 50em; border-radius: 1em">
+<div style="background-color: #c8e1ff; width: 50em; border-radius: 1em" accesskey="c">
 <fieldset> <legend><h4>Deixe seu Comentário!</h4></legend>
   <h5>Avalie:</h5>
       <form method="POST" action="" enctype="multipart/form-data">
