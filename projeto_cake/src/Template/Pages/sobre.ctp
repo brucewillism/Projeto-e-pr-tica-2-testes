@@ -1,10 +1,6 @@
-<section id="sobre" class="home-section bg-gray paddingbot-60">
-    <div class="container marginbot-50">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="wow fadeInDown" data-wow-delay="0.1s">
-            <div class="section-heading text-center">
+			<center>
               <h2 class="h-bold">Sobre</h2>
+             </center>
             </div>
           </div>
          <div class="wow fadeInUp" data-wow-offset="0" data-wow-delay="0.1s">
@@ -28,7 +24,7 @@
                 <li>
                   <span class="fa fa-check fa-2x icon-success"></span>
                    <span class="list">
-                    <strong>Centralização de Informações</strong><br/>
+                    <strong>Centralizadas</strong><br/>
                   </span>
                 </li>
               </ul>
