@@ -65,10 +65,10 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link text-white" href="sobre.html">SOBRE</a>
+        <a class="nav-link text-white" href="sobre.php">SOBRE</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-white" href="#">AJUDA</a>
+        <a class="nav-link text-white" href="ajuda.php">AJUDA</a>
       </li>    
     </ul>
   </div>  
